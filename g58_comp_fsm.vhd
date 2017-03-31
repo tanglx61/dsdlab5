@@ -1,0 +1,57 @@
+LIBRARY ieee;
+USE ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+ENTITY g58_comp_fsm IS
+	PORT( CLK, RST, TURN, SCAN_NEXT : IN STD_LOGIC;
+		  NUM_CARDS : IN STD_LOGIC_VECTOR(5 DOWNTO 0);
+		  SCAN_INDEX : OUT STD_LOGIC_VECTOR(5 DOWNTO 0);
+		  SCAN_ENABLE, DRAW_ENABLE : OUT STD_LOGIC);
+END g58_comp_fsm;
+
+ARCHITECTURE g58_comp_fsm_arch OF g58_comp_fsm IS
+
+TYPE State_type IS (A, B, C, D);
+SIGNAL y : State_type;
+SIGNAL CURRENT_INDEX : STD_LOGIC_VECTOR(5 DOWNTO 0);
+SIGNAL CURR_IDX : STD_LOGIC_VECTOR(5 DOWNTO 0);
+-- State A is state where we wait for TURN to go high
+-- State B is state where we wait for scan our cards
+-- State C is state all cards are invalid plays
+BEGIN
+	PROCESS ( RST, CLK ) -- process is executed when either RST or CLK has changed
+	BEGIN
+		IF RST = '1' THEN
+			y <= A;
+		ELSIF (CLK'EVENT AND CLK = '1') THEN -- rising edge
+			CASE y IS
+				WHEN A =>
+					IF TURN = '0' THEN
+						y <= A ;
+					ELSE
+						y <= B ;
+					END IF;
+				WHEN B =>
+					IF unsigned(CURRENT_INDEX) >= unsigned(NUM_CARDS) - 1 THEN
+						y <= D;
+					ELSE
+						y <= C;
+					END IF;
+				WHEN C =>
+					IF SCAN_NEXT = '1' THEN
+						y <= B;
+						CURR_IDX <= STD_LOGIC_VECTOR(unsigned(CURR_IDX) + 1);
+						
+					ELSE
+						y <= C;
+					END IF;
+				WHEN D =>
+					y <= A;
+			END CASE ;
+		END IF ;
+	END PROCESS ;
+	SCAN_ENABLE   <= '1' WHEN y = B ELSE '0';
+	SCAN_INDEX 	  <= CURR_IDX WHEN y = B ELSE "000000";
+	DRAW_ENABLE   <= '1' WHEN y = D ELSE '0';
+	CURRENT_INDEX <= "000000" WHEN y = C OR y = A ELSE CURR_IDX;
+END g58_comp_fsm_arch; 

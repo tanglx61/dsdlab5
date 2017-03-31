@@ -3,7 +3,7 @@ $comment
 		vcd file dsdlab5.msim.vcd -direction
 $end
 $date
-	Thu Mar 30 21:26:36 2017
+	Fri Mar 31 15:57:42 2017
 $end
 $version
 	ModelSim Version 10.1d
@@ -35,55 +35,53 @@ $var tri1 1 3 devclrn $end
 $var tri1 1 4 devpor $end
 $var tri1 1 5 devoe $end
 $var wire 1 6 inst|Equal0~0_combout $end
-$var wire 1 7 inst|Equal2~0_combout $end
-$var wire 1 8 inst|Equal2~1_combout $end
-$var wire 1 9 comp_done~combout $end
-$var wire 1 : clk~combout $end
-$var wire 1 ; clk~clkctrl_outclk $end
-$var wire 1 < inst|LessThan0~0_combout $end
-$var wire 1 = inst|state.A~0_combout $end
-$var wire 1 > rst~combout $end
-$var wire 1 ? rst~clkctrl_outclk $end
-$var wire 1 @ inst|state.A~regout $end
-$var wire 1 A inst|Selector1~0_combout $end
-$var wire 1 B inst|state.B~regout $end
-$var wire 1 C inst|Equal1~0_combout $end
-$var wire 1 D inst|LessThan1~0_combout $end
-$var wire 1 E inst|Equal1~1_combout $end
-$var wire 1 F inst|Equal0~1_combout $end
-$var wire 1 G player_done~combout $end
-$var wire 1 H inst|Selector3~0_combout $end
-$var wire 1 I inst|Selector3~1_combout $end
-$var wire 1 J inst|state.D~regout $end
-$var wire 1 K inst|Selector2~0_combout $end
-$var wire 1 L inst|Selector2~1_combout $end
-$var wire 1 M inst|Selector2~2_combout $end
-$var wire 1 N inst|state.C~regout $end
-$var wire 1 O inst|Selector4~0_combout $end
-$var wire 1 P inst|state.X~regout $end
-$var wire 1 Q inst|Selector5~0_combout $end
-$var wire 1 R inst|Selector5~1_combout $end
-$var wire 1 S inst|state.Y~regout $end
-$var wire 1 T inst|Selector6~0_combout $end
-$var wire 1 U inst|state.W~regout $end
-$var wire 1 V num_cards_deck~combout [5] $end
-$var wire 1 W num_cards_deck~combout [4] $end
-$var wire 1 X num_cards_deck~combout [3] $end
-$var wire 1 Y num_cards_deck~combout [2] $end
-$var wire 1 Z num_cards_deck~combout [1] $end
-$var wire 1 [ num_cards_deck~combout [0] $end
-$var wire 1 \ num_cards_comp~combout [5] $end
-$var wire 1 ] num_cards_comp~combout [4] $end
-$var wire 1 ^ num_cards_comp~combout [3] $end
-$var wire 1 _ num_cards_comp~combout [2] $end
-$var wire 1 ` num_cards_comp~combout [1] $end
-$var wire 1 a num_cards_comp~combout [0] $end
-$var wire 1 b num_cards_player~combout [5] $end
-$var wire 1 c num_cards_player~combout [4] $end
-$var wire 1 d num_cards_player~combout [3] $end
-$var wire 1 e num_cards_player~combout [2] $end
-$var wire 1 f num_cards_player~combout [1] $end
-$var wire 1 g num_cards_player~combout [0] $end
+$var wire 1 7 inst|Equal1~0_combout $end
+$var wire 1 8 inst|Selector2~0_combout $end
+$var wire 1 9 inst|Equal2~0_combout $end
+$var wire 1 : inst|Selector2~1_combout $end
+$var wire 1 ; inst|Selector3~0_combout $end
+$var wire 1 < comp_done~combout $end
+$var wire 1 = player_done~combout $end
+$var wire 1 > clk~combout $end
+$var wire 1 ? inst|LessThan0~0_combout $end
+$var wire 1 @ inst|state.A~0_combout $end
+$var wire 1 A rst~combout $end
+$var wire 1 B inst|state.A~regout $end
+$var wire 1 C inst|LessThan1~0_combout $end
+$var wire 1 D inst|Selector1~0_combout $end
+$var wire 1 E inst|state.B~regout $end
+$var wire 1 F inst|Selector2~2_combout $end
+$var wire 1 G inst|state.C~regout $end
+$var wire 1 H inst|Equal2~1_combout $end
+$var wire 1 I inst|Equal0~1_combout $end
+$var wire 1 J inst|Equal1~1_combout $end
+$var wire 1 K inst|Selector3~1_combout $end
+$var wire 1 L inst|state.D~regout $end
+$var wire 1 M inst|Selector4~0_combout $end
+$var wire 1 N inst|state.X~regout $end
+$var wire 1 O inst|Selector5~0_combout $end
+$var wire 1 P inst|Selector5~1_combout $end
+$var wire 1 Q inst|state.Y~regout $end
+$var wire 1 R inst|Selector6~0_combout $end
+$var wire 1 S inst|state.W~regout $end
+$var wire 1 T num_cards_comp~combout [5] $end
+$var wire 1 U num_cards_comp~combout [4] $end
+$var wire 1 V num_cards_comp~combout [3] $end
+$var wire 1 W num_cards_comp~combout [2] $end
+$var wire 1 X num_cards_comp~combout [1] $end
+$var wire 1 Y num_cards_comp~combout [0] $end
+$var wire 1 Z num_cards_player~combout [5] $end
+$var wire 1 [ num_cards_player~combout [4] $end
+$var wire 1 \ num_cards_player~combout [3] $end
+$var wire 1 ] num_cards_player~combout [2] $end
+$var wire 1 ^ num_cards_player~combout [1] $end
+$var wire 1 _ num_cards_player~combout [0] $end
+$var wire 1 ` num_cards_deck~combout [5] $end
+$var wire 1 a num_cards_deck~combout [4] $end
+$var wire 1 b num_cards_deck~combout [3] $end
+$var wire 1 c num_cards_deck~combout [2] $end
+$var wire 1 d num_cards_deck~combout [1] $end
+$var wire 1 e num_cards_deck~combout [0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -117,14 +115,14 @@ x2
 0:
 0;
 0<
-1=
+0=
 0>
 0?
-0@
-1A
+1@
+0A
 0B
 0C
-0D
+1D
 0E
 0F
 0G
@@ -140,109 +138,95 @@ x2
 0Q
 0R
 0S
-0T
+0Y
+0X
+0W
+1V
 0U
+0T
+0_
+0^
+0]
+1\
 0[
 0Z
-0Y
-1X
-0W
-0V
+0e
+0d
+0c
+1b
 0a
 0`
-0_
-1^
-0]
-0\
-0g
-0f
-0e
-1d
-0c
-0b
 $end
 #10000
 1!
-1:
-1;
+1>
 0/
+1E
 1B
-1@
-1M
-0A
+1F
+0D
 1*
 0+
 #20000
 1'
 0!
-1>
-0:
-0;
-1?
-1/
-0B
-0@
-0M
 1A
+0>
+1/
+0E
+0B
+0F
+1D
 0*
 1+
 #30000
 1!
-1:
-1;
+1>
 0/
 #40000
 0'
 0!
+0A
 0>
-0:
-0;
-0?
 1/
 #50000
 1!
-1:
-1;
+1>
 0/
+1E
 1B
-1@
-1M
-0A
+1F
+0D
 1*
 0+
 #60000
 0!
-0:
-0;
+0>
 1/
 #70000
 1!
-1:
-1;
+1>
 0/
-1N
-0B
-1Q
-1K
-0M
+1G
+0E
+1O
+18
+0F
 1,
 0*
-1L
-1M
+1:
+1F
 #80000
 0!
-0:
-0;
+0>
 1/
 #90000
 1!
-1:
-1;
+1>
 0/
 #100000
 0!
-0:
-0;
+0>
 1/
 #110000
 1&
@@ -251,528 +235,439 @@ b100 %
 b110 %
 b111 %
 1!
-1G
-1g
-1f
-1e
-0d
-1:
-1;
+1=
+1_
+1^
+1]
+0\
+1>
 0/
-0K
-1H
+1;
+08
 16
-0L
-1I
-0M
+1K
+0:
+0F
 #120000
 0!
-0:
-0;
+0>
 1/
 #130000
 0&
 1!
-0G
-1:
-1;
+0=
+1>
 0/
-1K
-0H
-1L
-0I
-1M
-0N
-1J
+0;
+18
 0K
-1H
-0,
+1:
+1F
+1L
+0G
+1;
+08
 1(
-0L
-1I
-0M
+0,
+1K
+0:
+0F
 #140000
 0!
-0:
-0;
+0>
 1/
 #150000
 1!
-1:
-1;
+1>
 0/
 #160000
 1"
 0!
-19
-0:
-0;
+1<
+0>
 1/
-1K
-0H
-1L
-0I
-1M
+0;
+18
+0K
+1:
+1F
 #170000
 1!
-1:
-1;
+1>
 0/
-1N
-0J
-1,
+0L
+1G
 0(
+1,
 #180000
 0"
 0!
-09
-0:
-0;
+0<
+0>
 1/
 #190000
 1!
-1:
-1;
+1>
 0/
 #200000
 0!
-0:
-0;
+0>
 1/
 #210000
 b110 %
 1&
 1!
-0g
-1G
-1:
-1;
+0_
+1=
+1>
 0/
-1<
-0K
-1H
-0L
-1I
-0M
+1?
+1;
+08
+1K
+0:
+0F
 #220000
 0!
-0:
-0;
+0>
 1/
 #230000
 0&
 1!
-0G
-1:
-1;
+0=
+1>
 0/
-1K
-0H
-1L
-0I
-1M
-0N
-1J
+0;
+18
 0K
-1H
-0,
+1:
+1F
+1L
+0G
+1;
+08
 1(
-0L
-1I
-0M
+0,
+1K
+0:
+0F
 #240000
 0!
-0:
-0;
+0>
 1/
 #250000
 1!
-1:
-1;
+1>
 0/
 #260000
 1"
 0!
-19
-0:
-0;
+1<
+0>
 1/
-1K
-0H
-1L
-0I
-1M
+0;
+18
+0K
+1:
+1F
 #270000
 1!
-1:
-1;
+1>
 0/
-1N
-0J
-1,
+0L
+1G
 0(
+1,
 #280000
 0"
 0!
-09
-0:
-0;
+0<
+0>
 1/
 #290000
 1!
-1:
-1;
+1>
 0/
 #300000
 0!
-0:
-0;
+0>
 1/
 #310000
 1!
-1:
-1;
+1>
 0/
 #320000
 0!
-0:
-0;
+0>
 1/
 #330000
 1!
-1:
-1;
+1>
 0/
 #340000
 0!
-0:
-0;
+0>
 1/
 #350000
 1!
-1:
-1;
+1>
 0/
 #360000
 0!
-0:
-0;
+0>
 1/
 #370000
 1!
-1:
-1;
+1>
 0/
 #380000
 0!
-0:
-0;
+0>
 1/
 #390000
 1!
-1:
-1;
+1>
 0/
 #400000
 0!
-0:
-0;
+0>
 1/
 #410000
 1!
-1:
-1;
+1>
 0/
 #420000
 0!
-0:
-0;
+0>
 1/
 #430000
 1!
-1:
-1;
+1>
 0/
 #440000
 0!
-0:
-0;
+0>
 1/
 #450000
 1!
-1:
-1;
+1>
 0/
 #460000
 0!
-0:
-0;
+0>
 1/
 #470000
 1!
-1:
-1;
+1>
 0/
 #480000
 0!
-0:
-0;
+0>
 1/
 #490000
 1!
-1:
-1;
+1>
 0/
 #500000
 0!
-0:
-0;
+0>
 1/
 #510000
 1!
-1:
-1;
+1>
 0/
 #520000
 0!
-0:
-0;
+0>
 1/
 #530000
 1!
-1:
-1;
+1>
 0/
 #540000
 0!
-0:
-0;
+0>
 1/
 #550000
 1!
-1:
-1;
+1>
 0/
 #560000
 0!
-0:
-0;
+0>
 1/
 #570000
 1!
-1:
-1;
+1>
 0/
 #580000
 0!
-0:
-0;
+0>
 1/
 #590000
 1!
-1:
-1;
+1>
 0/
 #600000
 0!
-0:
-0;
+0>
 1/
 #610000
 1!
-1:
-1;
+1>
 0/
 #620000
 0!
-0:
-0;
+0>
 1/
 #630000
 1!
-1:
-1;
+1>
 0/
 #640000
 0!
-0:
-0;
+0>
 1/
 #650000
 1!
-1:
-1;
+1>
 0/
 #660000
 0!
-0:
-0;
+0>
 1/
 #670000
 1!
-1:
-1;
+1>
 0/
 #680000
 0!
-0:
-0;
+0>
 1/
 #690000
 1!
-1:
-1;
+1>
 0/
 #700000
 0!
-0:
-0;
+0>
 1/
 #710000
 1!
-1:
-1;
+1>
 0/
 #720000
 0!
-0:
-0;
+0>
 1/
 #730000
 1!
-1:
-1;
+1>
 0/
 #740000
 0!
-0:
-0;
+0>
 1/
 #750000
 1!
-1:
-1;
+1>
 0/
 #760000
 0!
-0:
-0;
+0>
 1/
 #770000
 1!
-1:
-1;
+1>
 0/
 #780000
 0!
-0:
-0;
+0>
 1/
 #790000
 1!
-1:
-1;
+1>
 0/
 #800000
 0!
-0:
-0;
+0>
 1/
 #810000
 1!
-1:
-1;
+1>
 0/
 #820000
 0!
-0:
-0;
+0>
 1/
 #830000
 1!
-1:
-1;
+1>
 0/
 #840000
 0!
-0:
-0;
+0>
 1/
 #850000
 1!
-1:
-1;
+1>
 0/
 #860000
 0!
-0:
-0;
+0>
 1/
 #870000
 1!
-1:
-1;
+1>
 0/
 #880000
 0!
-0:
-0;
+0>
 1/
 #890000
 1!
-1:
-1;
+1>
 0/
 #900000
 0!
-0:
-0;
+0>
 1/
 #910000
 1!
-1:
-1;
+1>
 0/
 #920000
 0!
-0:
-0;
+0>
 1/
 #930000
 1!
-1:
-1;
+1>
 0/
 #940000
 0!
-0:
-0;
+0>
 1/
 #950000
 1!
-1:
-1;
+1>
 0/
 #960000
 0!
-0:
-0;
+0>
 1/
 #970000
 1!
-1:
-1;
+1>
 0/
 #980000
 0!
-0:
-0;
+0>
 1/
 #990000
 b1001 #
 1!
-1a
-1:
-1;
+1Y
+1>
 0/
 #1000000

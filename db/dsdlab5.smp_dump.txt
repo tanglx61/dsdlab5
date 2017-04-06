@@ -1,8 +1,33 @@
 
-State Machine - |g58_comp_player|g58_comp_fsm:inst|y
+State Machine - |g58_crazy8|g58_comp_player:inst|g58_comp_fsm:inst|y
 Name y.L y.D y.C y.B y.A 
 y.A 0 0 0 0 0 
 y.B 0 0 0 1 1 
 y.C 0 0 1 0 1 
 y.D 0 1 0 0 1 
 y.L 1 0 0 0 1 
+
+State Machine - |g58_crazy8|g58_play_deck:inst11|g58_dealer_rng:inst6|g58_dealerfsm:inst|y
+Name y.D y.C y.B y.A 
+y.A 0 0 0 0 
+y.B 0 0 1 1 
+y.C 0 1 0 1 
+y.D 1 0 0 1 
+
+State Machine - |g58_crazy8|g58_human_player:inst2|g58_human_fsm:inst8|state
+Name state.D state.C state.B state.A 
+state.A 0 0 0 0 
+state.B 0 0 1 1 
+state.C 0 1 0 1 
+state.D 1 0 0 1 
+
+State Machine - |g58_crazy8|g58_sys_ctrl_fsm:inst1|state
+Name state.W state.Y state.X state.D state.C state.B state.I state.A 
+state.A 0 0 0 0 0 0 0 0 
+state.I 0 0 0 0 0 0 1 1 
+state.B 0 0 0 0 0 1 0 1 
+state.C 0 0 0 0 1 0 0 1 
+state.D 0 0 0 1 0 0 0 1 
+state.X 0 0 1 0 0 0 0 1 
+state.Y 0 1 0 0 0 0 0 1 
+state.W 1 0 0 0 0 0 0 1 

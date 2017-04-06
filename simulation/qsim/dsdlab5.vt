@@ -18,34 +18,34 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/05/2017 22:30:20"
+// Generated on "04/06/2017 02:44:35"
                                                                         
-// Verilog Self-Checking Test Bench (with test vectors) for design :    g58_comp_player
+// Verilog Self-Checking Test Bench (with test vectors) for design :    g58_crazy8
 // 
 // Simulation tool : 3rd Party
 // 
 
 `timescale 1 ps/ 1 ps
-module g58_comp_player_vlg_sample_tst(
+module g58_crazy8_vlg_sample_tst(
 	clk,
-	new_card,
-	play_pile_top_card,
-	push_card,
-	rst,
-	turn,
+	down_button,
+	draw_button,
+	init_button,
+	play_button,
+	up_button,
 	sampler_tx
 );
 input  clk;
-input [5:0] new_card;
-input [5:0] play_pile_top_card;
-input  push_card;
-input  rst;
-input  turn;
+input  down_button;
+input  draw_button;
+input  init_button;
+input  play_button;
+input  up_button;
 output sampler_tx;
 
 reg sample;
 time current_time;
-always @(clk or new_card or play_pile_top_card or push_card or rst or turn)
+always @(clk or down_button or draw_button or init_button or play_button or up_button)
                                                                                 
 begin                                                 
  if ($realtime > 0)                                   
@@ -64,75 +64,111 @@ end
 assign sampler_tx = sample;
 endmodule
 
-module g58_comp_player_vlg_check_tst (
-	current_card,
-	done,
-	draw_enable,
-	legal_play,
-	num_cards,
-	scan_enable,
-	scan_index,
-	scan_next,
-	stack_mode,
+module g58_crazy8_vlg_check_tst (
+	card_dealt,
+	card_ready,
+	comp_num_cards,
+	comp_turn,
+	comp_won,
+	deal_comp,
+	deal_player,
+	human_current_card,
+	human_num_cards,
+	illegal_play,
+	player_turn,
+	player_won,
+	playing_deck_num_cards,
+	tie,
+	top_card,
 	sampler_rx
 );
-input [5:0] current_card;
-input  done;
-input  draw_enable;
-input  legal_play;
-input [5:0] num_cards;
-input  scan_enable;
-input [5:0] scan_index;
-input  scan_next;
-input [1:0] stack_mode;
+input [5:0] card_dealt;
+input  card_ready;
+input [5:0] comp_num_cards;
+input  comp_turn;
+input  comp_won;
+input  deal_comp;
+input  deal_player;
+input [5:0] human_current_card;
+input [5:0] human_num_cards;
+input  illegal_play;
+input  player_turn;
+input  player_won;
+input [5:0] playing_deck_num_cards;
+input  tie;
+input [5:0] top_card;
 input sampler_rx;
 
-reg [5:0] current_card_expected;
-reg  done_expected;
-reg  draw_enable_expected;
-reg  legal_play_expected;
-reg [5:0] num_cards_expected;
-reg  scan_enable_expected;
-reg [5:0] scan_index_expected;
-reg  scan_next_expected;
-reg [1:0] stack_mode_expected;
+reg [5:0] card_dealt_expected;
+reg  card_ready_expected;
+reg [5:0] comp_num_cards_expected;
+reg  comp_turn_expected;
+reg  comp_won_expected;
+reg  deal_comp_expected;
+reg  deal_player_expected;
+reg [5:0] human_current_card_expected;
+reg [5:0] human_num_cards_expected;
+reg  illegal_play_expected;
+reg  player_turn_expected;
+reg  player_won_expected;
+reg [5:0] playing_deck_num_cards_expected;
+reg  tie_expected;
+reg [5:0] top_card_expected;
 
-reg [5:0] current_card_prev;
-reg  done_prev;
-reg  draw_enable_prev;
-reg  legal_play_prev;
-reg [5:0] num_cards_prev;
-reg  scan_enable_prev;
-reg [5:0] scan_index_prev;
-reg  scan_next_prev;
-reg [1:0] stack_mode_prev;
+reg [5:0] card_dealt_prev;
+reg  card_ready_prev;
+reg [5:0] comp_num_cards_prev;
+reg  comp_turn_prev;
+reg  comp_won_prev;
+reg  deal_comp_prev;
+reg  deal_player_prev;
+reg [5:0] human_current_card_prev;
+reg [5:0] human_num_cards_prev;
+reg  illegal_play_prev;
+reg  player_turn_prev;
+reg  player_won_prev;
+reg [5:0] playing_deck_num_cards_prev;
+reg  tie_prev;
+reg [5:0] top_card_prev;
 
-reg [5:0] current_card_expected_prev;
-reg  done_expected_prev;
-reg  draw_enable_expected_prev;
-reg  legal_play_expected_prev;
-reg [5:0] num_cards_expected_prev;
-reg  scan_enable_expected_prev;
-reg [5:0] scan_index_expected_prev;
-reg  scan_next_expected_prev;
-reg [1:0] stack_mode_expected_prev;
+reg [5:0] card_dealt_expected_prev;
+reg  card_ready_expected_prev;
+reg [5:0] comp_num_cards_expected_prev;
+reg  comp_turn_expected_prev;
+reg  comp_won_expected_prev;
+reg  deal_comp_expected_prev;
+reg  deal_player_expected_prev;
+reg [5:0] human_current_card_expected_prev;
+reg [5:0] human_num_cards_expected_prev;
+reg  illegal_play_expected_prev;
+reg  player_turn_expected_prev;
+reg  player_won_expected_prev;
+reg [5:0] playing_deck_num_cards_expected_prev;
+reg  tie_expected_prev;
+reg [5:0] top_card_expected_prev;
 
-reg [5:0] last_current_card_exp;
-reg  last_done_exp;
-reg  last_draw_enable_exp;
-reg  last_legal_play_exp;
-reg [5:0] last_num_cards_exp;
-reg  last_scan_enable_exp;
-reg [5:0] last_scan_index_exp;
-reg  last_scan_next_exp;
-reg [1:0] last_stack_mode_exp;
+reg [5:0] last_card_dealt_exp;
+reg  last_card_ready_exp;
+reg [5:0] last_comp_num_cards_exp;
+reg  last_comp_turn_exp;
+reg  last_comp_won_exp;
+reg  last_deal_comp_exp;
+reg  last_deal_player_exp;
+reg [5:0] last_human_current_card_exp;
+reg [5:0] last_human_num_cards_exp;
+reg  last_illegal_play_exp;
+reg  last_player_turn_exp;
+reg  last_player_won_exp;
+reg [5:0] last_playing_deck_num_cards_exp;
+reg  last_tie_exp;
+reg [5:0] last_top_card_exp;
 
 reg trigger;
 
 integer i;
 integer nummismatches;
 
-reg [1:9] on_first_change ;
+reg [1:15] on_first_change ;
 
 
 initial
@@ -140,172 +176,326 @@ begin
 trigger = 0;
 i = 0;
 nummismatches = 0;
-on_first_change = 9'b1;
+on_first_change = 15'b1;
 end
 
 // update real /o prevs
 
 always @(trigger)
 begin
-	current_card_prev = current_card;
-	done_prev = done;
-	draw_enable_prev = draw_enable;
-	legal_play_prev = legal_play;
-	num_cards_prev = num_cards;
-	scan_enable_prev = scan_enable;
-	scan_index_prev = scan_index;
-	scan_next_prev = scan_next;
-	stack_mode_prev = stack_mode;
+	card_dealt_prev = card_dealt;
+	card_ready_prev = card_ready;
+	comp_num_cards_prev = comp_num_cards;
+	comp_turn_prev = comp_turn;
+	comp_won_prev = comp_won;
+	deal_comp_prev = deal_comp;
+	deal_player_prev = deal_player;
+	human_current_card_prev = human_current_card;
+	human_num_cards_prev = human_num_cards;
+	illegal_play_prev = illegal_play;
+	player_turn_prev = player_turn;
+	player_won_prev = player_won;
+	playing_deck_num_cards_prev = playing_deck_num_cards;
+	tie_prev = tie;
+	top_card_prev = top_card;
 end
 
 // update expected /o prevs
 
 always @(trigger)
 begin
-	current_card_expected_prev = current_card_expected;
-	done_expected_prev = done_expected;
-	draw_enable_expected_prev = draw_enable_expected;
-	legal_play_expected_prev = legal_play_expected;
-	num_cards_expected_prev = num_cards_expected;
-	scan_enable_expected_prev = scan_enable_expected;
-	scan_index_expected_prev = scan_index_expected;
-	scan_next_expected_prev = scan_next_expected;
-	stack_mode_expected_prev = stack_mode_expected;
+	card_dealt_expected_prev = card_dealt_expected;
+	card_ready_expected_prev = card_ready_expected;
+	comp_num_cards_expected_prev = comp_num_cards_expected;
+	comp_turn_expected_prev = comp_turn_expected;
+	comp_won_expected_prev = comp_won_expected;
+	deal_comp_expected_prev = deal_comp_expected;
+	deal_player_expected_prev = deal_player_expected;
+	human_current_card_expected_prev = human_current_card_expected;
+	human_num_cards_expected_prev = human_num_cards_expected;
+	illegal_play_expected_prev = illegal_play_expected;
+	player_turn_expected_prev = player_turn_expected;
+	player_won_expected_prev = player_won_expected;
+	playing_deck_num_cards_expected_prev = playing_deck_num_cards_expected;
+	tie_expected_prev = tie_expected;
+	top_card_expected_prev = top_card_expected;
 end
 
 
 
-// expected draw_enable
+// expected comp_won
 initial
 begin
-	draw_enable_expected = 1'bX;
+	comp_won_expected = 1'bX;
+	comp_won_expected = #999000 1'b0;
 end 
 
-// expected scan_enable
+// expected player_won
 initial
 begin
-	scan_enable_expected = 1'bX;
-end 
-// expected current_card[ 5 ]
-initial
-begin
-	current_card_expected[5] = 1'bX;
-end 
-// expected current_card[ 4 ]
-initial
-begin
-	current_card_expected[4] = 1'bX;
-end 
-// expected current_card[ 3 ]
-initial
-begin
-	current_card_expected[3] = 1'bX;
-end 
-// expected current_card[ 2 ]
-initial
-begin
-	current_card_expected[2] = 1'bX;
-end 
-// expected current_card[ 1 ]
-initial
-begin
-	current_card_expected[1] = 1'bX;
-end 
-// expected current_card[ 0 ]
-initial
-begin
-	current_card_expected[0] = 1'bX;
-end 
-// expected num_cards[ 5 ]
-initial
-begin
-	num_cards_expected[5] = 1'bX;
-end 
-// expected num_cards[ 4 ]
-initial
-begin
-	num_cards_expected[4] = 1'bX;
-end 
-// expected num_cards[ 3 ]
-initial
-begin
-	num_cards_expected[3] = 1'bX;
-end 
-// expected num_cards[ 2 ]
-initial
-begin
-	num_cards_expected[2] = 1'bX;
-end 
-// expected num_cards[ 1 ]
-initial
-begin
-	num_cards_expected[1] = 1'bX;
-end 
-// expected num_cards[ 0 ]
-initial
-begin
-	num_cards_expected[0] = 1'bX;
-end 
-// expected scan_index[ 5 ]
-initial
-begin
-	scan_index_expected[5] = 1'bX;
-end 
-// expected scan_index[ 4 ]
-initial
-begin
-	scan_index_expected[4] = 1'bX;
-end 
-// expected scan_index[ 3 ]
-initial
-begin
-	scan_index_expected[3] = 1'bX;
-end 
-// expected scan_index[ 2 ]
-initial
-begin
-	scan_index_expected[2] = 1'bX;
-end 
-// expected scan_index[ 1 ]
-initial
-begin
-	scan_index_expected[1] = 1'bX;
-end 
-// expected scan_index[ 0 ]
-initial
-begin
-	scan_index_expected[0] = 1'bX;
-end 
-// expected stack_mode[ 1 ]
-initial
-begin
-	stack_mode_expected[1] = 1'bX;
-end 
-// expected stack_mode[ 0 ]
-initial
-begin
-	stack_mode_expected[0] = 1'bX;
+	player_won_expected = 1'bX;
+	player_won_expected = #999000 1'b0;
 end 
 
-// expected legal_play
+// expected tie
 initial
 begin
-	legal_play_expected = 1'bX;
+	tie_expected = 1'bX;
+	tie_expected = #999000 1'b0;
+end 
+// expected comp_num_cards[ 5 ]
+initial
+begin
+	comp_num_cards_expected[5] = 1'bX;
+	comp_num_cards_expected[5] = #999000 1'b0;
+end 
+// expected comp_num_cards[ 4 ]
+initial
+begin
+	comp_num_cards_expected[4] = 1'bX;
+	comp_num_cards_expected[4] = #999000 1'b0;
+end 
+// expected comp_num_cards[ 3 ]
+initial
+begin
+	comp_num_cards_expected[3] = 1'bX;
+	comp_num_cards_expected[3] = #999000 1'b0;
+end 
+// expected comp_num_cards[ 2 ]
+initial
+begin
+	comp_num_cards_expected[2] = 1'bX;
+	comp_num_cards_expected[2] = #999000 1'b0;
+end 
+// expected comp_num_cards[ 1 ]
+initial
+begin
+	comp_num_cards_expected[1] = 1'bX;
+	comp_num_cards_expected[1] = #999000 1'b0;
+end 
+// expected comp_num_cards[ 0 ]
+initial
+begin
+	comp_num_cards_expected[0] = 1'bX;
+	comp_num_cards_expected[0] = #999000 1'b0;
+end 
+// expected human_num_cards[ 5 ]
+initial
+begin
+	human_num_cards_expected[5] = 1'bX;
+	human_num_cards_expected[5] = #999000 1'b0;
+end 
+// expected human_num_cards[ 4 ]
+initial
+begin
+	human_num_cards_expected[4] = 1'bX;
+	human_num_cards_expected[4] = #999000 1'b0;
+end 
+// expected human_num_cards[ 3 ]
+initial
+begin
+	human_num_cards_expected[3] = 1'bX;
+	human_num_cards_expected[3] = #999000 1'b0;
+end 
+// expected human_num_cards[ 2 ]
+initial
+begin
+	human_num_cards_expected[2] = 1'bX;
+	human_num_cards_expected[2] = #999000 1'b0;
+end 
+// expected human_num_cards[ 1 ]
+initial
+begin
+	human_num_cards_expected[1] = 1'bX;
+	human_num_cards_expected[1] = #999000 1'b0;
+end 
+// expected human_num_cards[ 0 ]
+initial
+begin
+	human_num_cards_expected[0] = 1'bX;
+	human_num_cards_expected[0] = #999000 1'b0;
+end 
+// expected playing_deck_num_cards[ 5 ]
+initial
+begin
+	playing_deck_num_cards_expected[5] = 1'bX;
+	playing_deck_num_cards_expected[5] = #999000 1'b0;
+end 
+// expected playing_deck_num_cards[ 4 ]
+initial
+begin
+	playing_deck_num_cards_expected[4] = 1'bX;
+	playing_deck_num_cards_expected[4] = #999000 1'b0;
+end 
+// expected playing_deck_num_cards[ 3 ]
+initial
+begin
+	playing_deck_num_cards_expected[3] = 1'bX;
+	playing_deck_num_cards_expected[3] = #999000 1'b0;
+end 
+// expected playing_deck_num_cards[ 2 ]
+initial
+begin
+	playing_deck_num_cards_expected[2] = 1'bX;
+	playing_deck_num_cards_expected[2] = #999000 1'b0;
+end 
+// expected playing_deck_num_cards[ 1 ]
+initial
+begin
+	playing_deck_num_cards_expected[1] = 1'bX;
+	playing_deck_num_cards_expected[1] = #999000 1'b0;
+end 
+// expected playing_deck_num_cards[ 0 ]
+initial
+begin
+	playing_deck_num_cards_expected[0] = 1'bX;
+	playing_deck_num_cards_expected[0] = #999000 1'b0;
+end 
+// expected top_card[ 5 ]
+initial
+begin
+	top_card_expected[5] = 1'bX;
+	top_card_expected[5] = #999000 1'b0;
+end 
+// expected top_card[ 4 ]
+initial
+begin
+	top_card_expected[4] = 1'bX;
+	top_card_expected[4] = #999000 1'b0;
+end 
+// expected top_card[ 3 ]
+initial
+begin
+	top_card_expected[3] = 1'bX;
+	top_card_expected[3] = #999000 1'b0;
+end 
+// expected top_card[ 2 ]
+initial
+begin
+	top_card_expected[2] = 1'bX;
+	top_card_expected[2] = #999000 1'b0;
+end 
+// expected top_card[ 1 ]
+initial
+begin
+	top_card_expected[1] = 1'bX;
+	top_card_expected[1] = #999000 1'b0;
+end 
+// expected top_card[ 0 ]
+initial
+begin
+	top_card_expected[0] = 1'bX;
+	top_card_expected[0] = #999000 1'b0;
 end 
 
-// expected scan_next
+// expected deal_comp
 initial
 begin
-	scan_next_expected = 1'bX;
+	deal_comp_expected = 1'bX;
+	deal_comp_expected = #999000 1'b0;
 end 
 
-// expected done
+// expected deal_player
 initial
 begin
-	done_expected = 1'bX;
+	deal_player_expected = 1'bX;
+	deal_player_expected = #999000 1'b0;
+end 
+
+// expected comp_turn
+initial
+begin
+	comp_turn_expected = 1'bX;
+	comp_turn_expected = #999000 1'b0;
+end 
+
+// expected player_turn
+initial
+begin
+	player_turn_expected = 1'bX;
+	player_turn_expected = #999000 1'b0;
+end 
+// expected card_dealt[ 5 ]
+initial
+begin
+	card_dealt_expected[5] = 1'bX;
+	card_dealt_expected[5] = #999000 1'b0;
+end 
+// expected card_dealt[ 4 ]
+initial
+begin
+	card_dealt_expected[4] = 1'bX;
+	card_dealt_expected[4] = #999000 1'b0;
+end 
+// expected card_dealt[ 3 ]
+initial
+begin
+	card_dealt_expected[3] = 1'bX;
+	card_dealt_expected[3] = #999000 1'b0;
+end 
+// expected card_dealt[ 2 ]
+initial
+begin
+	card_dealt_expected[2] = 1'bX;
+	card_dealt_expected[2] = #999000 1'b0;
+end 
+// expected card_dealt[ 1 ]
+initial
+begin
+	card_dealt_expected[1] = 1'bX;
+	card_dealt_expected[1] = #999000 1'b0;
+end 
+// expected card_dealt[ 0 ]
+initial
+begin
+	card_dealt_expected[0] = 1'bX;
+	card_dealt_expected[0] = #999000 1'b0;
+end 
+
+// expected card_ready
+initial
+begin
+	card_ready_expected = 1'bX;
+	card_ready_expected = #999000 1'b0;
+end 
+// expected human_current_card[ 5 ]
+initial
+begin
+	human_current_card_expected[5] = 1'bX;
+end 
+// expected human_current_card[ 4 ]
+initial
+begin
+	human_current_card_expected[4] = 1'bX;
+end 
+// expected human_current_card[ 3 ]
+initial
+begin
+	human_current_card_expected[3] = 1'bX;
+end 
+// expected human_current_card[ 2 ]
+initial
+begin
+	human_current_card_expected[2] = 1'bX;
+end 
+// expected human_current_card[ 1 ]
+initial
+begin
+	human_current_card_expected[1] = 1'bX;
+end 
+// expected human_current_card[ 0 ]
+initial
+begin
+	human_current_card_expected[0] = 1'bX;
+end 
+
+// expected illegal_play
+initial
+begin
+	illegal_play_expected = 1'bX;
 end 
 // generate trigger
-always @(current_card_expected or current_card or done_expected or done or draw_enable_expected or draw_enable or legal_play_expected or legal_play or num_cards_expected or num_cards or scan_enable_expected or scan_enable or scan_index_expected or scan_index or scan_next_expected or scan_next or stack_mode_expected or stack_mode)
+always @(card_dealt_expected or card_dealt or card_ready_expected or card_ready or comp_num_cards_expected or comp_num_cards or comp_turn_expected or comp_turn or comp_won_expected or comp_won or deal_comp_expected or deal_comp or deal_player_expected or deal_player or human_current_card_expected or human_current_card or human_num_cards_expected or human_num_cards or illegal_play_expected or illegal_play or player_turn_expected or player_turn or player_won_expected or player_won or playing_deck_num_cards_expected or playing_deck_num_cards or tie_expected or tie or top_card_expected or top_card)
 begin
 	trigger <= ~trigger;
 end
@@ -315,333 +505,593 @@ begin
 `ifdef debug_tbench
 	$display("Scanning pattern %d @time = %t",i,$realtime );
 	i = i + 1;
-	$display("| expected current_card = %b | expected done = %b | expected draw_enable = %b | expected legal_play = %b | expected num_cards = %b | expected scan_enable = %b | expected scan_index = %b | expected scan_next = %b | expected stack_mode = %b | ",current_card_expected_prev,done_expected_prev,draw_enable_expected_prev,legal_play_expected_prev,num_cards_expected_prev,scan_enable_expected_prev,scan_index_expected_prev,scan_next_expected_prev,stack_mode_expected_prev);
-	$display("| real current_card = %b | real done = %b | real draw_enable = %b | real legal_play = %b | real num_cards = %b | real scan_enable = %b | real scan_index = %b | real scan_next = %b | real stack_mode = %b | ",current_card_prev,done_prev,draw_enable_prev,legal_play_prev,num_cards_prev,scan_enable_prev,scan_index_prev,scan_next_prev,stack_mode_prev);
+	$display("| expected card_dealt = %b | expected card_ready = %b | expected comp_num_cards = %b | expected comp_turn = %b | expected comp_won = %b | expected deal_comp = %b | expected deal_player = %b | expected human_current_card = %b | expected human_num_cards = %b | expected illegal_play = %b | expected player_turn = %b | expected player_won = %b | expected playing_deck_num_cards = %b | expected tie = %b | expected top_card = %b | ",card_dealt_expected_prev,card_ready_expected_prev,comp_num_cards_expected_prev,comp_turn_expected_prev,comp_won_expected_prev,deal_comp_expected_prev,deal_player_expected_prev,human_current_card_expected_prev,human_num_cards_expected_prev,illegal_play_expected_prev,player_turn_expected_prev,player_won_expected_prev,playing_deck_num_cards_expected_prev,tie_expected_prev,top_card_expected_prev);
+	$display("| real card_dealt = %b | real card_ready = %b | real comp_num_cards = %b | real comp_turn = %b | real comp_won = %b | real deal_comp = %b | real deal_player = %b | real human_current_card = %b | real human_num_cards = %b | real illegal_play = %b | real player_turn = %b | real player_won = %b | real playing_deck_num_cards = %b | real tie = %b | real top_card = %b | ",card_dealt_prev,card_ready_prev,comp_num_cards_prev,comp_turn_prev,comp_won_prev,deal_comp_prev,deal_player_prev,human_current_card_prev,human_num_cards_prev,illegal_play_prev,player_turn_prev,player_won_prev,playing_deck_num_cards_prev,tie_prev,top_card_prev);
 `endif
 	if (
-		( current_card_expected_prev[0] !== 1'bx ) && ( current_card_prev[0] !== current_card_expected_prev[0] )
-		&& ((current_card_expected_prev[0] !== last_current_card_exp[0]) ||
+		( card_dealt_expected_prev[0] !== 1'bx ) && ( card_dealt_prev[0] !== card_dealt_expected_prev[0] )
+		&& ((card_dealt_expected_prev[0] !== last_card_dealt_exp[0]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port current_card[0] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", current_card_expected_prev);
-		$display ("     Real value = %b", current_card_prev);
+		$display ("ERROR! Vector Mismatch for output port card_dealt[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", card_dealt_expected_prev);
+		$display ("     Real value = %b", card_dealt_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_current_card_exp[0] = current_card_expected_prev[0];
+		last_card_dealt_exp[0] = card_dealt_expected_prev[0];
 	end
 	if (
-		( current_card_expected_prev[1] !== 1'bx ) && ( current_card_prev[1] !== current_card_expected_prev[1] )
-		&& ((current_card_expected_prev[1] !== last_current_card_exp[1]) ||
+		( card_dealt_expected_prev[1] !== 1'bx ) && ( card_dealt_prev[1] !== card_dealt_expected_prev[1] )
+		&& ((card_dealt_expected_prev[1] !== last_card_dealt_exp[1]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port current_card[1] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", current_card_expected_prev);
-		$display ("     Real value = %b", current_card_prev);
+		$display ("ERROR! Vector Mismatch for output port card_dealt[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", card_dealt_expected_prev);
+		$display ("     Real value = %b", card_dealt_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_current_card_exp[1] = current_card_expected_prev[1];
+		last_card_dealt_exp[1] = card_dealt_expected_prev[1];
 	end
 	if (
-		( current_card_expected_prev[2] !== 1'bx ) && ( current_card_prev[2] !== current_card_expected_prev[2] )
-		&& ((current_card_expected_prev[2] !== last_current_card_exp[2]) ||
+		( card_dealt_expected_prev[2] !== 1'bx ) && ( card_dealt_prev[2] !== card_dealt_expected_prev[2] )
+		&& ((card_dealt_expected_prev[2] !== last_card_dealt_exp[2]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port current_card[2] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", current_card_expected_prev);
-		$display ("     Real value = %b", current_card_prev);
+		$display ("ERROR! Vector Mismatch for output port card_dealt[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", card_dealt_expected_prev);
+		$display ("     Real value = %b", card_dealt_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_current_card_exp[2] = current_card_expected_prev[2];
+		last_card_dealt_exp[2] = card_dealt_expected_prev[2];
 	end
 	if (
-		( current_card_expected_prev[3] !== 1'bx ) && ( current_card_prev[3] !== current_card_expected_prev[3] )
-		&& ((current_card_expected_prev[3] !== last_current_card_exp[3]) ||
+		( card_dealt_expected_prev[3] !== 1'bx ) && ( card_dealt_prev[3] !== card_dealt_expected_prev[3] )
+		&& ((card_dealt_expected_prev[3] !== last_card_dealt_exp[3]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port current_card[3] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", current_card_expected_prev);
-		$display ("     Real value = %b", current_card_prev);
+		$display ("ERROR! Vector Mismatch for output port card_dealt[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", card_dealt_expected_prev);
+		$display ("     Real value = %b", card_dealt_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_current_card_exp[3] = current_card_expected_prev[3];
+		last_card_dealt_exp[3] = card_dealt_expected_prev[3];
 	end
 	if (
-		( current_card_expected_prev[4] !== 1'bx ) && ( current_card_prev[4] !== current_card_expected_prev[4] )
-		&& ((current_card_expected_prev[4] !== last_current_card_exp[4]) ||
+		( card_dealt_expected_prev[4] !== 1'bx ) && ( card_dealt_prev[4] !== card_dealt_expected_prev[4] )
+		&& ((card_dealt_expected_prev[4] !== last_card_dealt_exp[4]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port current_card[4] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", current_card_expected_prev);
-		$display ("     Real value = %b", current_card_prev);
+		$display ("ERROR! Vector Mismatch for output port card_dealt[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", card_dealt_expected_prev);
+		$display ("     Real value = %b", card_dealt_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_current_card_exp[4] = current_card_expected_prev[4];
+		last_card_dealt_exp[4] = card_dealt_expected_prev[4];
 	end
 	if (
-		( current_card_expected_prev[5] !== 1'bx ) && ( current_card_prev[5] !== current_card_expected_prev[5] )
-		&& ((current_card_expected_prev[5] !== last_current_card_exp[5]) ||
+		( card_dealt_expected_prev[5] !== 1'bx ) && ( card_dealt_prev[5] !== card_dealt_expected_prev[5] )
+		&& ((card_dealt_expected_prev[5] !== last_card_dealt_exp[5]) ||
 			on_first_change[1])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port current_card[5] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", current_card_expected_prev);
-		$display ("     Real value = %b", current_card_prev);
+		$display ("ERROR! Vector Mismatch for output port card_dealt[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", card_dealt_expected_prev);
+		$display ("     Real value = %b", card_dealt_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[1] = 1'b0;
-		last_current_card_exp[5] = current_card_expected_prev[5];
+		last_card_dealt_exp[5] = card_dealt_expected_prev[5];
 	end
 	if (
-		( done_expected_prev !== 1'bx ) && ( done_prev !== done_expected_prev )
-		&& ((done_expected_prev !== last_done_exp) ||
+		( card_ready_expected_prev !== 1'bx ) && ( card_ready_prev !== card_ready_expected_prev )
+		&& ((card_ready_expected_prev !== last_card_ready_exp) ||
 			on_first_change[2])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port done :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", done_expected_prev);
-		$display ("     Real value = %b", done_prev);
+		$display ("ERROR! Vector Mismatch for output port card_ready :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", card_ready_expected_prev);
+		$display ("     Real value = %b", card_ready_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[2] = 1'b0;
-		last_done_exp = done_expected_prev;
+		last_card_ready_exp = card_ready_expected_prev;
 	end
 	if (
-		( draw_enable_expected_prev !== 1'bx ) && ( draw_enable_prev !== draw_enable_expected_prev )
-		&& ((draw_enable_expected_prev !== last_draw_enable_exp) ||
+		( comp_num_cards_expected_prev[0] !== 1'bx ) && ( comp_num_cards_prev[0] !== comp_num_cards_expected_prev[0] )
+		&& ((comp_num_cards_expected_prev[0] !== last_comp_num_cards_exp[0]) ||
 			on_first_change[3])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port draw_enable :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", draw_enable_expected_prev);
-		$display ("     Real value = %b", draw_enable_prev);
+		$display ("ERROR! Vector Mismatch for output port comp_num_cards[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", comp_num_cards_expected_prev);
+		$display ("     Real value = %b", comp_num_cards_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[3] = 1'b0;
-		last_draw_enable_exp = draw_enable_expected_prev;
+		last_comp_num_cards_exp[0] = comp_num_cards_expected_prev[0];
 	end
 	if (
-		( legal_play_expected_prev !== 1'bx ) && ( legal_play_prev !== legal_play_expected_prev )
-		&& ((legal_play_expected_prev !== last_legal_play_exp) ||
+		( comp_num_cards_expected_prev[1] !== 1'bx ) && ( comp_num_cards_prev[1] !== comp_num_cards_expected_prev[1] )
+		&& ((comp_num_cards_expected_prev[1] !== last_comp_num_cards_exp[1]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port comp_num_cards[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", comp_num_cards_expected_prev);
+		$display ("     Real value = %b", comp_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_comp_num_cards_exp[1] = comp_num_cards_expected_prev[1];
+	end
+	if (
+		( comp_num_cards_expected_prev[2] !== 1'bx ) && ( comp_num_cards_prev[2] !== comp_num_cards_expected_prev[2] )
+		&& ((comp_num_cards_expected_prev[2] !== last_comp_num_cards_exp[2]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port comp_num_cards[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", comp_num_cards_expected_prev);
+		$display ("     Real value = %b", comp_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_comp_num_cards_exp[2] = comp_num_cards_expected_prev[2];
+	end
+	if (
+		( comp_num_cards_expected_prev[3] !== 1'bx ) && ( comp_num_cards_prev[3] !== comp_num_cards_expected_prev[3] )
+		&& ((comp_num_cards_expected_prev[3] !== last_comp_num_cards_exp[3]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port comp_num_cards[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", comp_num_cards_expected_prev);
+		$display ("     Real value = %b", comp_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_comp_num_cards_exp[3] = comp_num_cards_expected_prev[3];
+	end
+	if (
+		( comp_num_cards_expected_prev[4] !== 1'bx ) && ( comp_num_cards_prev[4] !== comp_num_cards_expected_prev[4] )
+		&& ((comp_num_cards_expected_prev[4] !== last_comp_num_cards_exp[4]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port comp_num_cards[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", comp_num_cards_expected_prev);
+		$display ("     Real value = %b", comp_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_comp_num_cards_exp[4] = comp_num_cards_expected_prev[4];
+	end
+	if (
+		( comp_num_cards_expected_prev[5] !== 1'bx ) && ( comp_num_cards_prev[5] !== comp_num_cards_expected_prev[5] )
+		&& ((comp_num_cards_expected_prev[5] !== last_comp_num_cards_exp[5]) ||
+			on_first_change[3])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port comp_num_cards[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", comp_num_cards_expected_prev);
+		$display ("     Real value = %b", comp_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[3] = 1'b0;
+		last_comp_num_cards_exp[5] = comp_num_cards_expected_prev[5];
+	end
+	if (
+		( comp_turn_expected_prev !== 1'bx ) && ( comp_turn_prev !== comp_turn_expected_prev )
+		&& ((comp_turn_expected_prev !== last_comp_turn_exp) ||
 			on_first_change[4])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port legal_play :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", legal_play_expected_prev);
-		$display ("     Real value = %b", legal_play_prev);
+		$display ("ERROR! Vector Mismatch for output port comp_turn :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", comp_turn_expected_prev);
+		$display ("     Real value = %b", comp_turn_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[4] = 1'b0;
-		last_legal_play_exp = legal_play_expected_prev;
+		last_comp_turn_exp = comp_turn_expected_prev;
 	end
 	if (
-		( num_cards_expected_prev[0] !== 1'bx ) && ( num_cards_prev[0] !== num_cards_expected_prev[0] )
-		&& ((num_cards_expected_prev[0] !== last_num_cards_exp[0]) ||
+		( comp_won_expected_prev !== 1'bx ) && ( comp_won_prev !== comp_won_expected_prev )
+		&& ((comp_won_expected_prev !== last_comp_won_exp) ||
 			on_first_change[5])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port num_cards[0] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", num_cards_expected_prev);
-		$display ("     Real value = %b", num_cards_prev);
+		$display ("ERROR! Vector Mismatch for output port comp_won :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", comp_won_expected_prev);
+		$display ("     Real value = %b", comp_won_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[5] = 1'b0;
-		last_num_cards_exp[0] = num_cards_expected_prev[0];
+		last_comp_won_exp = comp_won_expected_prev;
 	end
 	if (
-		( num_cards_expected_prev[1] !== 1'bx ) && ( num_cards_prev[1] !== num_cards_expected_prev[1] )
-		&& ((num_cards_expected_prev[1] !== last_num_cards_exp[1]) ||
-			on_first_change[5])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port num_cards[1] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", num_cards_expected_prev);
-		$display ("     Real value = %b", num_cards_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[5] = 1'b0;
-		last_num_cards_exp[1] = num_cards_expected_prev[1];
-	end
-	if (
-		( num_cards_expected_prev[2] !== 1'bx ) && ( num_cards_prev[2] !== num_cards_expected_prev[2] )
-		&& ((num_cards_expected_prev[2] !== last_num_cards_exp[2]) ||
-			on_first_change[5])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port num_cards[2] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", num_cards_expected_prev);
-		$display ("     Real value = %b", num_cards_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[5] = 1'b0;
-		last_num_cards_exp[2] = num_cards_expected_prev[2];
-	end
-	if (
-		( num_cards_expected_prev[3] !== 1'bx ) && ( num_cards_prev[3] !== num_cards_expected_prev[3] )
-		&& ((num_cards_expected_prev[3] !== last_num_cards_exp[3]) ||
-			on_first_change[5])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port num_cards[3] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", num_cards_expected_prev);
-		$display ("     Real value = %b", num_cards_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[5] = 1'b0;
-		last_num_cards_exp[3] = num_cards_expected_prev[3];
-	end
-	if (
-		( num_cards_expected_prev[4] !== 1'bx ) && ( num_cards_prev[4] !== num_cards_expected_prev[4] )
-		&& ((num_cards_expected_prev[4] !== last_num_cards_exp[4]) ||
-			on_first_change[5])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port num_cards[4] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", num_cards_expected_prev);
-		$display ("     Real value = %b", num_cards_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[5] = 1'b0;
-		last_num_cards_exp[4] = num_cards_expected_prev[4];
-	end
-	if (
-		( num_cards_expected_prev[5] !== 1'bx ) && ( num_cards_prev[5] !== num_cards_expected_prev[5] )
-		&& ((num_cards_expected_prev[5] !== last_num_cards_exp[5]) ||
-			on_first_change[5])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port num_cards[5] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", num_cards_expected_prev);
-		$display ("     Real value = %b", num_cards_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[5] = 1'b0;
-		last_num_cards_exp[5] = num_cards_expected_prev[5];
-	end
-	if (
-		( scan_enable_expected_prev !== 1'bx ) && ( scan_enable_prev !== scan_enable_expected_prev )
-		&& ((scan_enable_expected_prev !== last_scan_enable_exp) ||
+		( deal_comp_expected_prev !== 1'bx ) && ( deal_comp_prev !== deal_comp_expected_prev )
+		&& ((deal_comp_expected_prev !== last_deal_comp_exp) ||
 			on_first_change[6])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port scan_enable :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", scan_enable_expected_prev);
-		$display ("     Real value = %b", scan_enable_prev);
+		$display ("ERROR! Vector Mismatch for output port deal_comp :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", deal_comp_expected_prev);
+		$display ("     Real value = %b", deal_comp_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[6] = 1'b0;
-		last_scan_enable_exp = scan_enable_expected_prev;
+		last_deal_comp_exp = deal_comp_expected_prev;
 	end
 	if (
-		( scan_index_expected_prev[0] !== 1'bx ) && ( scan_index_prev[0] !== scan_index_expected_prev[0] )
-		&& ((scan_index_expected_prev[0] !== last_scan_index_exp[0]) ||
+		( deal_player_expected_prev !== 1'bx ) && ( deal_player_prev !== deal_player_expected_prev )
+		&& ((deal_player_expected_prev !== last_deal_player_exp) ||
 			on_first_change[7])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port scan_index[0] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", scan_index_expected_prev);
-		$display ("     Real value = %b", scan_index_prev);
+		$display ("ERROR! Vector Mismatch for output port deal_player :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", deal_player_expected_prev);
+		$display ("     Real value = %b", deal_player_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[7] = 1'b0;
-		last_scan_index_exp[0] = scan_index_expected_prev[0];
+		last_deal_player_exp = deal_player_expected_prev;
 	end
 	if (
-		( scan_index_expected_prev[1] !== 1'bx ) && ( scan_index_prev[1] !== scan_index_expected_prev[1] )
-		&& ((scan_index_expected_prev[1] !== last_scan_index_exp[1]) ||
-			on_first_change[7])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port scan_index[1] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", scan_index_expected_prev);
-		$display ("     Real value = %b", scan_index_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[7] = 1'b0;
-		last_scan_index_exp[1] = scan_index_expected_prev[1];
-	end
-	if (
-		( scan_index_expected_prev[2] !== 1'bx ) && ( scan_index_prev[2] !== scan_index_expected_prev[2] )
-		&& ((scan_index_expected_prev[2] !== last_scan_index_exp[2]) ||
-			on_first_change[7])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port scan_index[2] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", scan_index_expected_prev);
-		$display ("     Real value = %b", scan_index_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[7] = 1'b0;
-		last_scan_index_exp[2] = scan_index_expected_prev[2];
-	end
-	if (
-		( scan_index_expected_prev[3] !== 1'bx ) && ( scan_index_prev[3] !== scan_index_expected_prev[3] )
-		&& ((scan_index_expected_prev[3] !== last_scan_index_exp[3]) ||
-			on_first_change[7])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port scan_index[3] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", scan_index_expected_prev);
-		$display ("     Real value = %b", scan_index_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[7] = 1'b0;
-		last_scan_index_exp[3] = scan_index_expected_prev[3];
-	end
-	if (
-		( scan_index_expected_prev[4] !== 1'bx ) && ( scan_index_prev[4] !== scan_index_expected_prev[4] )
-		&& ((scan_index_expected_prev[4] !== last_scan_index_exp[4]) ||
-			on_first_change[7])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port scan_index[4] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", scan_index_expected_prev);
-		$display ("     Real value = %b", scan_index_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[7] = 1'b0;
-		last_scan_index_exp[4] = scan_index_expected_prev[4];
-	end
-	if (
-		( scan_index_expected_prev[5] !== 1'bx ) && ( scan_index_prev[5] !== scan_index_expected_prev[5] )
-		&& ((scan_index_expected_prev[5] !== last_scan_index_exp[5]) ||
-			on_first_change[7])
-	)
-	begin
-		$display ("ERROR! Vector Mismatch for output port scan_index[5] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", scan_index_expected_prev);
-		$display ("     Real value = %b", scan_index_prev);
-		nummismatches = nummismatches + 1;
-		on_first_change[7] = 1'b0;
-		last_scan_index_exp[5] = scan_index_expected_prev[5];
-	end
-	if (
-		( scan_next_expected_prev !== 1'bx ) && ( scan_next_prev !== scan_next_expected_prev )
-		&& ((scan_next_expected_prev !== last_scan_next_exp) ||
+		( human_current_card_expected_prev[0] !== 1'bx ) && ( human_current_card_prev[0] !== human_current_card_expected_prev[0] )
+		&& ((human_current_card_expected_prev[0] !== last_human_current_card_exp[0]) ||
 			on_first_change[8])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port scan_next :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", scan_next_expected_prev);
-		$display ("     Real value = %b", scan_next_prev);
+		$display ("ERROR! Vector Mismatch for output port human_current_card[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_current_card_expected_prev);
+		$display ("     Real value = %b", human_current_card_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[8] = 1'b0;
-		last_scan_next_exp = scan_next_expected_prev;
+		last_human_current_card_exp[0] = human_current_card_expected_prev[0];
 	end
 	if (
-		( stack_mode_expected_prev[0] !== 1'bx ) && ( stack_mode_prev[0] !== stack_mode_expected_prev[0] )
-		&& ((stack_mode_expected_prev[0] !== last_stack_mode_exp[0]) ||
+		( human_current_card_expected_prev[1] !== 1'bx ) && ( human_current_card_prev[1] !== human_current_card_expected_prev[1] )
+		&& ((human_current_card_expected_prev[1] !== last_human_current_card_exp[1]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port human_current_card[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_current_card_expected_prev);
+		$display ("     Real value = %b", human_current_card_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_human_current_card_exp[1] = human_current_card_expected_prev[1];
+	end
+	if (
+		( human_current_card_expected_prev[2] !== 1'bx ) && ( human_current_card_prev[2] !== human_current_card_expected_prev[2] )
+		&& ((human_current_card_expected_prev[2] !== last_human_current_card_exp[2]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port human_current_card[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_current_card_expected_prev);
+		$display ("     Real value = %b", human_current_card_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_human_current_card_exp[2] = human_current_card_expected_prev[2];
+	end
+	if (
+		( human_current_card_expected_prev[3] !== 1'bx ) && ( human_current_card_prev[3] !== human_current_card_expected_prev[3] )
+		&& ((human_current_card_expected_prev[3] !== last_human_current_card_exp[3]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port human_current_card[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_current_card_expected_prev);
+		$display ("     Real value = %b", human_current_card_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_human_current_card_exp[3] = human_current_card_expected_prev[3];
+	end
+	if (
+		( human_current_card_expected_prev[4] !== 1'bx ) && ( human_current_card_prev[4] !== human_current_card_expected_prev[4] )
+		&& ((human_current_card_expected_prev[4] !== last_human_current_card_exp[4]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port human_current_card[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_current_card_expected_prev);
+		$display ("     Real value = %b", human_current_card_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_human_current_card_exp[4] = human_current_card_expected_prev[4];
+	end
+	if (
+		( human_current_card_expected_prev[5] !== 1'bx ) && ( human_current_card_prev[5] !== human_current_card_expected_prev[5] )
+		&& ((human_current_card_expected_prev[5] !== last_human_current_card_exp[5]) ||
+			on_first_change[8])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port human_current_card[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_current_card_expected_prev);
+		$display ("     Real value = %b", human_current_card_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[8] = 1'b0;
+		last_human_current_card_exp[5] = human_current_card_expected_prev[5];
+	end
+	if (
+		( human_num_cards_expected_prev[0] !== 1'bx ) && ( human_num_cards_prev[0] !== human_num_cards_expected_prev[0] )
+		&& ((human_num_cards_expected_prev[0] !== last_human_num_cards_exp[0]) ||
 			on_first_change[9])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port stack_mode[0] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", stack_mode_expected_prev);
-		$display ("     Real value = %b", stack_mode_prev);
+		$display ("ERROR! Vector Mismatch for output port human_num_cards[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_num_cards_expected_prev);
+		$display ("     Real value = %b", human_num_cards_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[9] = 1'b0;
-		last_stack_mode_exp[0] = stack_mode_expected_prev[0];
+		last_human_num_cards_exp[0] = human_num_cards_expected_prev[0];
 	end
 	if (
-		( stack_mode_expected_prev[1] !== 1'bx ) && ( stack_mode_prev[1] !== stack_mode_expected_prev[1] )
-		&& ((stack_mode_expected_prev[1] !== last_stack_mode_exp[1]) ||
+		( human_num_cards_expected_prev[1] !== 1'bx ) && ( human_num_cards_prev[1] !== human_num_cards_expected_prev[1] )
+		&& ((human_num_cards_expected_prev[1] !== last_human_num_cards_exp[1]) ||
 			on_first_change[9])
 	)
 	begin
-		$display ("ERROR! Vector Mismatch for output port stack_mode[1] :: @time = %t",  $realtime);
-		$display ("     Expected value = %b", stack_mode_expected_prev);
-		$display ("     Real value = %b", stack_mode_prev);
+		$display ("ERROR! Vector Mismatch for output port human_num_cards[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_num_cards_expected_prev);
+		$display ("     Real value = %b", human_num_cards_prev);
 		nummismatches = nummismatches + 1;
 		on_first_change[9] = 1'b0;
-		last_stack_mode_exp[1] = stack_mode_expected_prev[1];
+		last_human_num_cards_exp[1] = human_num_cards_expected_prev[1];
+	end
+	if (
+		( human_num_cards_expected_prev[2] !== 1'bx ) && ( human_num_cards_prev[2] !== human_num_cards_expected_prev[2] )
+		&& ((human_num_cards_expected_prev[2] !== last_human_num_cards_exp[2]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port human_num_cards[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_num_cards_expected_prev);
+		$display ("     Real value = %b", human_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_human_num_cards_exp[2] = human_num_cards_expected_prev[2];
+	end
+	if (
+		( human_num_cards_expected_prev[3] !== 1'bx ) && ( human_num_cards_prev[3] !== human_num_cards_expected_prev[3] )
+		&& ((human_num_cards_expected_prev[3] !== last_human_num_cards_exp[3]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port human_num_cards[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_num_cards_expected_prev);
+		$display ("     Real value = %b", human_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_human_num_cards_exp[3] = human_num_cards_expected_prev[3];
+	end
+	if (
+		( human_num_cards_expected_prev[4] !== 1'bx ) && ( human_num_cards_prev[4] !== human_num_cards_expected_prev[4] )
+		&& ((human_num_cards_expected_prev[4] !== last_human_num_cards_exp[4]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port human_num_cards[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_num_cards_expected_prev);
+		$display ("     Real value = %b", human_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_human_num_cards_exp[4] = human_num_cards_expected_prev[4];
+	end
+	if (
+		( human_num_cards_expected_prev[5] !== 1'bx ) && ( human_num_cards_prev[5] !== human_num_cards_expected_prev[5] )
+		&& ((human_num_cards_expected_prev[5] !== last_human_num_cards_exp[5]) ||
+			on_first_change[9])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port human_num_cards[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", human_num_cards_expected_prev);
+		$display ("     Real value = %b", human_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[9] = 1'b0;
+		last_human_num_cards_exp[5] = human_num_cards_expected_prev[5];
+	end
+	if (
+		( illegal_play_expected_prev !== 1'bx ) && ( illegal_play_prev !== illegal_play_expected_prev )
+		&& ((illegal_play_expected_prev !== last_illegal_play_exp) ||
+			on_first_change[10])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port illegal_play :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", illegal_play_expected_prev);
+		$display ("     Real value = %b", illegal_play_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[10] = 1'b0;
+		last_illegal_play_exp = illegal_play_expected_prev;
+	end
+	if (
+		( player_turn_expected_prev !== 1'bx ) && ( player_turn_prev !== player_turn_expected_prev )
+		&& ((player_turn_expected_prev !== last_player_turn_exp) ||
+			on_first_change[11])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port player_turn :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", player_turn_expected_prev);
+		$display ("     Real value = %b", player_turn_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[11] = 1'b0;
+		last_player_turn_exp = player_turn_expected_prev;
+	end
+	if (
+		( player_won_expected_prev !== 1'bx ) && ( player_won_prev !== player_won_expected_prev )
+		&& ((player_won_expected_prev !== last_player_won_exp) ||
+			on_first_change[12])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port player_won :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", player_won_expected_prev);
+		$display ("     Real value = %b", player_won_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[12] = 1'b0;
+		last_player_won_exp = player_won_expected_prev;
+	end
+	if (
+		( playing_deck_num_cards_expected_prev[0] !== 1'bx ) && ( playing_deck_num_cards_prev[0] !== playing_deck_num_cards_expected_prev[0] )
+		&& ((playing_deck_num_cards_expected_prev[0] !== last_playing_deck_num_cards_exp[0]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port playing_deck_num_cards[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", playing_deck_num_cards_expected_prev);
+		$display ("     Real value = %b", playing_deck_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_playing_deck_num_cards_exp[0] = playing_deck_num_cards_expected_prev[0];
+	end
+	if (
+		( playing_deck_num_cards_expected_prev[1] !== 1'bx ) && ( playing_deck_num_cards_prev[1] !== playing_deck_num_cards_expected_prev[1] )
+		&& ((playing_deck_num_cards_expected_prev[1] !== last_playing_deck_num_cards_exp[1]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port playing_deck_num_cards[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", playing_deck_num_cards_expected_prev);
+		$display ("     Real value = %b", playing_deck_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_playing_deck_num_cards_exp[1] = playing_deck_num_cards_expected_prev[1];
+	end
+	if (
+		( playing_deck_num_cards_expected_prev[2] !== 1'bx ) && ( playing_deck_num_cards_prev[2] !== playing_deck_num_cards_expected_prev[2] )
+		&& ((playing_deck_num_cards_expected_prev[2] !== last_playing_deck_num_cards_exp[2]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port playing_deck_num_cards[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", playing_deck_num_cards_expected_prev);
+		$display ("     Real value = %b", playing_deck_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_playing_deck_num_cards_exp[2] = playing_deck_num_cards_expected_prev[2];
+	end
+	if (
+		( playing_deck_num_cards_expected_prev[3] !== 1'bx ) && ( playing_deck_num_cards_prev[3] !== playing_deck_num_cards_expected_prev[3] )
+		&& ((playing_deck_num_cards_expected_prev[3] !== last_playing_deck_num_cards_exp[3]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port playing_deck_num_cards[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", playing_deck_num_cards_expected_prev);
+		$display ("     Real value = %b", playing_deck_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_playing_deck_num_cards_exp[3] = playing_deck_num_cards_expected_prev[3];
+	end
+	if (
+		( playing_deck_num_cards_expected_prev[4] !== 1'bx ) && ( playing_deck_num_cards_prev[4] !== playing_deck_num_cards_expected_prev[4] )
+		&& ((playing_deck_num_cards_expected_prev[4] !== last_playing_deck_num_cards_exp[4]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port playing_deck_num_cards[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", playing_deck_num_cards_expected_prev);
+		$display ("     Real value = %b", playing_deck_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_playing_deck_num_cards_exp[4] = playing_deck_num_cards_expected_prev[4];
+	end
+	if (
+		( playing_deck_num_cards_expected_prev[5] !== 1'bx ) && ( playing_deck_num_cards_prev[5] !== playing_deck_num_cards_expected_prev[5] )
+		&& ((playing_deck_num_cards_expected_prev[5] !== last_playing_deck_num_cards_exp[5]) ||
+			on_first_change[13])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port playing_deck_num_cards[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", playing_deck_num_cards_expected_prev);
+		$display ("     Real value = %b", playing_deck_num_cards_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[13] = 1'b0;
+		last_playing_deck_num_cards_exp[5] = playing_deck_num_cards_expected_prev[5];
+	end
+	if (
+		( tie_expected_prev !== 1'bx ) && ( tie_prev !== tie_expected_prev )
+		&& ((tie_expected_prev !== last_tie_exp) ||
+			on_first_change[14])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port tie :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", tie_expected_prev);
+		$display ("     Real value = %b", tie_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[14] = 1'b0;
+		last_tie_exp = tie_expected_prev;
+	end
+	if (
+		( top_card_expected_prev[0] !== 1'bx ) && ( top_card_prev[0] !== top_card_expected_prev[0] )
+		&& ((top_card_expected_prev[0] !== last_top_card_exp[0]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port top_card[0] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", top_card_expected_prev);
+		$display ("     Real value = %b", top_card_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_top_card_exp[0] = top_card_expected_prev[0];
+	end
+	if (
+		( top_card_expected_prev[1] !== 1'bx ) && ( top_card_prev[1] !== top_card_expected_prev[1] )
+		&& ((top_card_expected_prev[1] !== last_top_card_exp[1]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port top_card[1] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", top_card_expected_prev);
+		$display ("     Real value = %b", top_card_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_top_card_exp[1] = top_card_expected_prev[1];
+	end
+	if (
+		( top_card_expected_prev[2] !== 1'bx ) && ( top_card_prev[2] !== top_card_expected_prev[2] )
+		&& ((top_card_expected_prev[2] !== last_top_card_exp[2]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port top_card[2] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", top_card_expected_prev);
+		$display ("     Real value = %b", top_card_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_top_card_exp[2] = top_card_expected_prev[2];
+	end
+	if (
+		( top_card_expected_prev[3] !== 1'bx ) && ( top_card_prev[3] !== top_card_expected_prev[3] )
+		&& ((top_card_expected_prev[3] !== last_top_card_exp[3]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port top_card[3] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", top_card_expected_prev);
+		$display ("     Real value = %b", top_card_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_top_card_exp[3] = top_card_expected_prev[3];
+	end
+	if (
+		( top_card_expected_prev[4] !== 1'bx ) && ( top_card_prev[4] !== top_card_expected_prev[4] )
+		&& ((top_card_expected_prev[4] !== last_top_card_exp[4]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port top_card[4] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", top_card_expected_prev);
+		$display ("     Real value = %b", top_card_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_top_card_exp[4] = top_card_expected_prev[4];
+	end
+	if (
+		( top_card_expected_prev[5] !== 1'bx ) && ( top_card_prev[5] !== top_card_expected_prev[5] )
+		&& ((top_card_expected_prev[5] !== last_top_card_exp[5]) ||
+			on_first_change[15])
+	)
+	begin
+		$display ("ERROR! Vector Mismatch for output port top_card[5] :: @time = %t",  $realtime);
+		$display ("     Expected value = %b", top_card_expected_prev);
+		$display ("     Real value = %b", top_card_prev);
+		nummismatches = nummismatches + 1;
+		on_first_change[15] = 1'b0;
+		last_top_card_exp[5] = top_card_expected_prev[5];
 	end
 
 	trigger <= ~trigger;
@@ -650,7 +1100,7 @@ initial
 
 begin 
 $timeformat(-12,3," ps",6);
-#400000;
+#10000000;
 if (nummismatches > 0)
 	$display ("%d mismatched vectors : Simulation failed !",nummismatches);
 else
@@ -659,55 +1109,59 @@ $finish;
 end 
 endmodule
 
-module g58_comp_player_vlg_vec_tst();
+module g58_crazy8_vlg_vec_tst();
 // constants                                           
 // general purpose registers
 reg clk;
-reg [5:0] new_card;
-reg [5:0] play_pile_top_card;
-reg push_card;
-reg rst;
-reg turn;
+reg down_button;
+reg draw_button;
+reg init_button;
+reg play_button;
+reg up_button;
 // wires                                               
-wire [5:0] current_card;
-wire done;
-wire draw_enable;
-wire legal_play;
-wire [5:0] num_cards;
-wire scan_enable;
-wire [5:0] scan_index;
-wire scan_next;
-wire [1:0] stack_mode;
+wire [5:0] card_dealt;
+wire card_ready;
+wire [5:0] comp_num_cards;
+wire comp_turn;
+wire comp_won;
+wire deal_comp;
+wire deal_player;
+wire [5:0] human_current_card;
+wire [5:0] human_num_cards;
+wire illegal_play;
+wire player_turn;
+wire player_won;
+wire [5:0] playing_deck_num_cards;
+wire tie;
+wire [5:0] top_card;
 
 wire sampler;                             
 
 // assign statements (if any)                          
-g58_comp_player i1 (
+g58_crazy8 i1 (
 // port map - connection between master ports and signals/registers   
+	.card_dealt(card_dealt),
+	.card_ready(card_ready),
 	.clk(clk),
-	.current_card(current_card),
-	.done(done),
-	.draw_enable(draw_enable),
-	.legal_play(legal_play),
-	.new_card(new_card),
-	.num_cards(num_cards),
-	.play_pile_top_card(play_pile_top_card),
-	.push_card(push_card),
-	.rst(rst),
-	.scan_enable(scan_enable),
-	.scan_index(scan_index),
-	.scan_next(scan_next),
-	.stack_mode(stack_mode),
-	.turn(turn)
+	.comp_num_cards(comp_num_cards),
+	.comp_turn(comp_turn),
+	.comp_won(comp_won),
+	.deal_comp(deal_comp),
+	.deal_player(deal_player),
+	.down_button(down_button),
+	.draw_button(draw_button),
+	.human_current_card(human_current_card),
+	.human_num_cards(human_num_cards),
+	.illegal_play(illegal_play),
+	.init_button(init_button),
+	.play_button(play_button),
+	.player_turn(player_turn),
+	.player_won(player_won),
+	.playing_deck_num_cards(playing_deck_num_cards),
+	.tie(tie),
+	.top_card(top_card),
+	.up_button(up_button)
 );
-
-// rst
-initial
-begin
-	rst = 1'b0;
-	rst = #20000 1'b1;
-	rst = #20000 1'b0;
-end 
 
 // clk
 always
@@ -717,116 +1171,64 @@ begin
 	#10000;
 end 
 
-// push_card
+// down_button
 initial
 begin
-	push_card = 1'b0;
-	push_card = #60000 1'b1;
-	push_card = #20000 1'b0;
-	push_card = #20000 1'b1;
-	push_card = #20000 1'b0;
-	push_card = #20000 1'b1;
-	push_card = #20000 1'b0;
+	down_button = 1'b0;
 end 
 
-// turn
+// draw_button
 initial
 begin
-	turn = 1'b0;
-	turn = #180000 1'b1;
-	turn = #110000 1'b0;
-end 
-// new_card[ 5 ]
-initial
-begin
-	new_card[5] = 1'b0;
-end 
-// new_card[ 4 ]
-initial
-begin
-	new_card[4] = 1'b0;
-	new_card[4] = #60000 1'b1;
-	new_card[4] = #80000 1'b0;
-	new_card[4] = #40000 1'b1;
-	new_card[4] = #40000 1'b0;
-end 
-// new_card[ 3 ]
-initial
-begin
-	new_card[3] = 1'b0;
-	new_card[3] = #60000 1'b1;
-	new_card[3] = #40000 1'b0;
-end 
-// new_card[ 2 ]
-initial
-begin
-	new_card[2] = 1'b0;
-	new_card[2] = #180000 1'b1;
-	new_card[2] = #40000 1'b0;
-end 
-// new_card[ 1 ]
-initial
-begin
-	new_card[1] = 1'b0;
-	new_card[1] = #140000 1'b1;
-	new_card[1] = #40000 1'b0;
-end 
-// new_card[ 0 ]
-initial
-begin
-	new_card[0] = 1'b0;
-end 
-// play_pile_top_card[ 5 ]
-initial
-begin
-	play_pile_top_card[5] = 1'b0;
-end 
-// play_pile_top_card[ 4 ]
-initial
-begin
-	play_pile_top_card[4] = 1'b1;
-end 
-// play_pile_top_card[ 3 ]
-initial
-begin
-	play_pile_top_card[3] = 1'b0;
-end 
-// play_pile_top_card[ 2 ]
-initial
-begin
-	play_pile_top_card[2] = 1'b0;
-end 
-// play_pile_top_card[ 1 ]
-initial
-begin
-	play_pile_top_card[1] = 1'b0;
-end 
-// play_pile_top_card[ 0 ]
-initial
-begin
-	play_pile_top_card[0] = 1'b0;
+	draw_button = 1'b0;
 end 
 
-g58_comp_player_vlg_sample_tst tb_sample (
+// init_button
+initial
+begin
+	init_button = 1'b0;
+	init_button = #30000 1'b1;
+	init_button = #100000 1'b0;
+end 
+
+// play_button
+initial
+begin
+	play_button = 1'b0;
+end 
+
+// up_button
+initial
+begin
+	up_button = 1'b0;
+end 
+
+g58_crazy8_vlg_sample_tst tb_sample (
 	.clk(clk),
-	.new_card(new_card),
-	.play_pile_top_card(play_pile_top_card),
-	.push_card(push_card),
-	.rst(rst),
-	.turn(turn),
+	.down_button(down_button),
+	.draw_button(draw_button),
+	.init_button(init_button),
+	.play_button(play_button),
+	.up_button(up_button),
 	.sampler_tx(sampler)
 );
 
-g58_comp_player_vlg_check_tst tb_out(
-	.current_card(current_card),
-	.done(done),
-	.draw_enable(draw_enable),
-	.legal_play(legal_play),
-	.num_cards(num_cards),
-	.scan_enable(scan_enable),
-	.scan_index(scan_index),
-	.scan_next(scan_next),
-	.stack_mode(stack_mode),
+g58_crazy8_vlg_check_tst tb_out(
+	.card_dealt(card_dealt),
+	.card_ready(card_ready),
+	.comp_num_cards(comp_num_cards),
+	.comp_turn(comp_turn),
+	.comp_won(comp_won),
+	.deal_comp(deal_comp),
+	.deal_player(deal_player),
+	.human_current_card(human_current_card),
+	.human_num_cards(human_num_cards),
+	.illegal_play(illegal_play),
+	.player_turn(player_turn),
+	.player_won(player_won),
+	.playing_deck_num_cards(playing_deck_num_cards),
+	.tie(tie),
+	.top_card(top_card),
 	.sampler_rx(sampler)
 );
 endmodule

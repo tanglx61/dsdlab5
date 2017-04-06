@@ -412,31 +412,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 1561 784 1609 816)
-	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
-	(text "inst13" (rect 3 21 32 33)(font "Arial" ))
-	(port
-		(pt 0 16)
-		(input)
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
-		(line (pt 0 16)(pt 13 16))
-	)
-	(port
-		(pt 48 16)
-		(output)
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
-		(line (pt 39 16)(pt 48 16))
-	)
-	(drawing
-		(line (pt 13 25)(pt 13 7))
-		(line (pt 13 7)(pt 31 16))
-		(line (pt 13 25)(pt 31 16))
-		(circle (rect 31 12 39 20))
-	)
-)
-(symbol
 	(rect 208 768 344 968)
 	(text "LPM_COUNTER" (rect 20 0 133 16)(font "Arial" (font_size 10)))
 	(text "inst1" (rect 3 189 26 201)(font "Arial" ))
@@ -815,20 +790,30 @@ applicable agreement for further details.
 		(arc (pt 31 36)(pt 31 12)(rect 19 12 44 37))
 	)
 )
-(connector
-	(text "play_pulse" (rect 392 312 445 324)(font "Arial" ))
-	(pt 384 328)
-	(pt 456 328)
-)
-(connector
-	(text "up_pulse" (rect 392 360 435 372)(font "Arial" ))
-	(pt 384 376)
-	(pt 456 376)
-)
-(connector
-	(text "down_pulse" (rect 392 376 448 388)(font "Arial" ))
-	(pt 384 392)
-	(pt 456 392)
+(symbol
+	(rect 1424 712 1472 744)
+	(text "NOT" (rect 1 0 21 10)(font "Arial" (font_size 6)))
+	(text "inst_1231231" (rect 3 21 67 33)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(text "IN" (rect 2 7 13 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 13 16))
+	)
+	(port
+		(pt 48 16)
+		(output)
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 32 7 49 19)(font "Courier New" (bold))(invisible))
+		(line (pt 39 16)(pt 48 16))
+	)
+	(drawing
+		(line (pt 13 25)(pt 13 7))
+		(line (pt 13 7)(pt 31 16))
+		(line (pt 13 25)(pt 31 16))
+		(circle (rect 31 12 39 20))
+	)
 )
 (connector
 	(text "clk" (rect 544 152 558 164)(font "Arial" ))
@@ -841,14 +826,6 @@ applicable agreement for further details.
 	(pt 528 152)
 )
 (connector
-	(pt 728 152)
-	(pt 784 152)
-)
-(connector
-	(pt 704 264)
-	(pt 776 264)
-)
-(connector
 	(text "up_button" (rect 528 248 576 260)(font "Arial" ))
 	(pt 520 264)
 	(pt 584 264)
@@ -859,10 +836,6 @@ applicable agreement for further details.
 	(pt 584 280)
 )
 (connector
-	(pt 696 376)
-	(pt 776 376)
-)
-(connector
 	(text "down_button" (rect 520 360 581 372)(font "Arial" ))
 	(pt 576 376)
 	(pt 512 376)
@@ -871,11 +844,6 @@ applicable agreement for further details.
 	(text "clk" (rect 520 376 534 388)(font "Arial" ))
 	(pt 576 392)
 	(pt 512 392)
-)
-(connector
-	(text "draw_pulse" (rect 392 328 446 340)(font "Arial" ))
-	(pt 384 344)
-	(pt 456 344)
 )
 (connector
 	(text "clk" (rect 144 880 158 892)(font "Arial" ))
@@ -906,14 +874,6 @@ applicable agreement for further details.
 	(pt 344 864)
 	(pt 432 864)
 	(bus)
-)
-(connector
-	(pt 704 496)
-	(pt 784 496)
-)
-(connector
-	(pt 784 496)
-	(pt 784 488)
 )
 (connector
 	(pt 512 512)
@@ -1033,10 +993,6 @@ applicable agreement for further details.
 	(pt 1361 792)
 )
 (connector
-	(pt 1361 792)
-	(pt 1440 792)
-)
-(connector
 	(text "turn" (rect 1392 800 1410 812)(font "Arial" ))
 	(pt 1440 800)
 	(pt 1384 800)
@@ -1066,13 +1022,50 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(text "legal_play" (rect 1513 784 1562 796)(font "Arial" ))
+	(text "legal_play" (rect 1529 784 1578 796)(font "Arial" ))
 	(pt 1504 800)
-	(pt 1561 800)
+	(pt 1577 800)
 )
 (connector
-	(text "illegal_play" (rect 1634 784 1688 796)(font "Arial" ))
-	(pt 1728 800)
-	(pt 1609 800)
+	(pt 1424 728)
+	(pt 1400 728)
+)
+(connector
+	(pt 1400 728)
+	(pt 1400 792)
+)
+(connector
+	(pt 1361 792)
+	(pt 1400 792)
+)
+(connector
+	(pt 1400 792)
+	(pt 1440 792)
+)
+(connector
+	(text "illegal_play" (rect 1480 712 1534 724)(font "Arial" ))
+	(pt 1472 728)
+	(pt 1560 728)
+)
+(connector
+	(text "play_pulse" (rect 762 136 815 148)(font "Arial" ))
+	(pt 728 152)
+	(pt 784 152)
+)
+(connector
+	(text "up_pulse" (rect 735 248 778 260)(font "Arial" ))
+	(pt 704 264)
+	(pt 776 264)
+)
+(connector
+	(text "down_pulse" (rect 755 360 811 372)(font "Arial" ))
+	(pt 696 376)
+	(pt 776 376)
+)
+(connector
+	(text "draw_pulse" (rect 745 480 799 492)(font "Arial" ))
+	(pt 704 496)
+	(pt 784 496)
 )
 (junction (pt 1361 792))
+(junction (pt 1400 792))

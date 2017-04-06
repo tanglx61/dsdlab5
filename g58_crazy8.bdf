@@ -1080,37 +1080,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 696 760 808 808)
-	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
-	(text "inst17" (rect 3 37 32 49)(font "Arial" ))
-	(port
-		(pt 112 32)
-		(output)
-		(text "result[LPM_WIDTH-1..0]" (rect 75 19 208 33)(font "Arial" (font_size 8)))
-		(text "result[]" (rect 75 19 113 33)(font "Arial" (font_size 8)))
-		(line (pt 64 32)(pt 112 32)(line_width 3))
-	)
-	(parameter
-		"LPM_CVALUE"
-		"7"
-		"Unsigned value to which outputs will be set"
-	)
-	(parameter
-		"LPM_WIDTH"
-		"6"
-		"Width of output, any integer > 0"
-		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
-	)
-	(drawing
-		(text "(cvalue)" (rect 21 26 68 40)(font "Arial" (font_size 8)))
-		(line (pt 16 24)(pt 64 24))
-		(line (pt 16 40)(pt 64 40))
-		(line (pt 64 40)(pt 64 24))
-		(line (pt 16 40)(pt 16 24))
-	)
-	(annotation_block (parameter)(rect 808 712 952 754))
-)
-(symbol
 	(rect 160 824 272 872)
 	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
 	(text "inst_g" (rect 3 37 37 51)(font "Arial" (font_size 8)))
@@ -1140,6 +1109,37 @@ applicable agreement for further details.
 		(line (pt 16 40)(pt 16 24))
 	)
 	(annotation_block (parameter)(rect 272 776 416 818))
+)
+(symbol
+	(rect 696 760 808 808)
+	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
+	(text "inst17" (rect 3 37 32 49)(font "Arial" ))
+	(port
+		(pt 112 32)
+		(output)
+		(text "result[LPM_WIDTH-1..0]" (rect 75 19 208 33)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 19 113 33)(font "Arial" (font_size 8)))
+		(line (pt 64 32)(pt 112 32)(line_width 3))
+	)
+	(parameter
+		"LPM_CVALUE"
+		"5"
+		"Unsigned value to which outputs will be set"
+	)
+	(parameter
+		"LPM_WIDTH"
+		"6"
+		"Width of output, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
+	)
+	(drawing
+		(text "(cvalue)" (rect 21 26 68 40)(font "Arial" (font_size 8)))
+		(line (pt 16 24)(pt 64 24))
+		(line (pt 16 40)(pt 64 40))
+		(line (pt 64 40)(pt 64 24))
+		(line (pt 16 40)(pt 16 24))
+	)
+	(annotation_block (parameter)(rect 808 712 952 754))
 )
 (connector
 	(pt 728 392)

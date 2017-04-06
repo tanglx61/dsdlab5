@@ -1,5 +1,5 @@
 Flow report for dsdlab5
-Thu Apr 06 02:44:36 2017
+Thu Apr 06 03:00:35 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 06 02:44:36 2017           ;
+; Flow Status                        ; Successful - Thu Apr 06 03:00:35 2017           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; dsdlab5                                         ;
 ; Top-level Entity Name              ; g58_crazy8                                      ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C20F484C7                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 1,166                                           ;
-;     Total combinational functions  ; 1,160                                           ;
-;     Dedicated logic registers      ; 711                                             ;
-; Total registers                    ; 711                                             ;
+; Total logic elements               ; 1,808                                           ;
+;     Total combinational functions  ; 1,803                                           ;
+;     Dedicated logic registers      ; 1,049                                           ;
+; Total registers                    ; 1049                                            ;
 ; Total pins                         ; 51                                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 6,656                                           ;
+; Total memory bits                  ; 9,984                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
 ; Total PLLs                         ; 0                                               ;
 +------------------------------------+-------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/06/2017 02:42:47 ;
+; Start date & time ; 04/06/2017 02:56:32 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; dsdlab5             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+-------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                         ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+-------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1096859490829.149146096721076 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1096859490829.149146179114752 ; --            ; --          ; --             ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST     ; On                            ; --            ; --          ; eda_simulation ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)     ; <None>        ; --          ; --             ;
@@ -95,12 +95,16 @@ applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:13     ; 1.0                     ; 557 MB              ; 00:00:12                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 396 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 396 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 396 MB              ; 00:00:01                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 396 MB              ; 00:00:01                           ;
-; Total                ; 00:00:17     ; --                      ; --                  ; 00:00:16                           ;
+; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 564 MB              ; 00:00:16                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 398 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 415 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 399 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 415 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 399 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 415 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 399 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 415 MB              ; 00:00:01                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -114,6 +118,10 @@ applicable agreement for further details.
 ; EDA Netlist Writer   ; bah              ; Windows 7 ; 6.1        ; x86_64         ;
 ; EDA Netlist Writer   ; bah              ; Windows 7 ; 6.1        ; x86_64         ;
 ; EDA Netlist Writer   ; bah              ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; bah              ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; bah              ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; bah              ; Windows 7 ; 6.1        ; x86_64         ;
+; EDA Netlist Writer   ; bah              ; Windows 7 ; 6.1        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 
@@ -121,6 +129,10 @@ applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off dsdlab5 -c dsdlab5
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog dsdlab5 -c dsdlab5 --vector_source=C:/Users/Lixuan/Desktop/dsdlab5/g58_crazy8_test.vwf --testbench_file=./simulation/qsim/dsdlab5.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog dsdlab5 -c dsdlab5
+quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog dsdlab5 -c dsdlab5 --vector_source=C:/Users/Lixuan/Desktop/dsdlab5/g58_crazy8_test.vwf --testbench_file=./simulation/qsim/dsdlab5.vt
+quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog dsdlab5 -c dsdlab5
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog dsdlab5 -c dsdlab5 --vector_source=C:/Users/Lixuan/Desktop/dsdlab5/g58_crazy8_test.vwf --testbench_file=./simulation/qsim/dsdlab5.vt
 quartus_eda --functional=on --simulation=on --tool=modelsim_oem --format=verilog dsdlab5 -c dsdlab5
 quartus_eda --gen_testbench --check_outputs=on --tool=modelsim_oem --format=verilog dsdlab5 -c dsdlab5 --vector_source=C:/Users/Lixuan/Desktop/dsdlab5/g58_crazy8_test.vwf --testbench_file=./simulation/qsim/dsdlab5.vt

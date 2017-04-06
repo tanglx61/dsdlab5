@@ -210,9 +210,9 @@ done <= g58_human_fsm:inst8.TURN_DONE
 clk => g58_human_fsm:inst8.CLK
 clk => g58_stack52:inst.clk
 clk => LPM_COUNTER:inst1.clock
-clk => g58_pulse_gen:inst2.clk
 clk => g58_pulse_gen:inst5.clk
 clk => g58_pulse_gen:inst6.clk
+clk => g58_pulse_gen:inst2.clk
 clk => g58_pulse_gen:inst7.clk
 rst => g58_human_fsm:inst8.RST
 rst => g58_stack52:inst.rst
@@ -231,10 +231,7 @@ addr[2] <= LPM_COUNTER:inst1.q[2]
 addr[3] <= LPM_COUNTER:inst1.q[3]
 addr[4] <= LPM_COUNTER:inst1.q[4]
 addr[5] <= LPM_COUNTER:inst1.q[5]
-up_button => LPM_COUNTER:inst1.updown
-up_button => inst4.IN1
 up_button => g58_pulse_gen:inst5.button
-down_button => inst4.IN0
 down_button => g58_pulse_gen:inst6.button
 new_card[0] => g58_stack52:inst.data[0]
 new_card[1] => g58_stack52:inst.data[1]
@@ -248,11 +245,9 @@ play_pile_top_card[2] => g58_rules:inst3.play_pile_top_card[2]
 play_pile_top_card[3] => g58_rules:inst3.play_pile_top_card[3]
 play_pile_top_card[4] => g58_rules:inst3.play_pile_top_card[4]
 play_pile_top_card[5] => g58_rules:inst3.play_pile_top_card[5]
-play_button => inst9.IN2
 play_button => g58_pulse_gen:inst2.button
-draw_button => g58_human_fsm:inst8.DRAW_BUTTON
 draw_button => g58_pulse_gen:inst7.button
-illegal_play <= inst13.DB_MAX_OUTPUT_PORT_TYPE
+illegal_play <= inst_1231231.DB_MAX_OUTPUT_PORT_TYPE
 draw_enable <= g58_human_fsm:inst8.DRAW_ENABLE
 num_cards[0] <= g58_stack52:inst.num[0]
 num_cards[1] <= g58_stack52:inst.num[1]
@@ -14337,106 +14332,6 @@ datab[4] => data_wire[2].IN1
 datab[5] => data_wire[2].IN1
 
 
-|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2
-pulse <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-button => inst.IN0
-clk => LPM_COUNTER:inst_counter.clock
-clk => inst3.CLK
-
-
-|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2|LPM_COMPARE:inst_compare
-dataa[0] => cmpr_62e:auto_generated.dataa[0]
-dataa[1] => cmpr_62e:auto_generated.dataa[1]
-dataa[2] => cmpr_62e:auto_generated.dataa[2]
-dataa[3] => cmpr_62e:auto_generated.dataa[3]
-datab[0] => cmpr_62e:auto_generated.datab[0]
-datab[1] => cmpr_62e:auto_generated.datab[1]
-datab[2] => cmpr_62e:auto_generated.datab[2]
-datab[3] => cmpr_62e:auto_generated.datab[3]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-alb <= <GND>
-aeb <= cmpr_62e:auto_generated.aeb
-agb <= <GND>
-aleb <= <GND>
-aneb <= cmpr_62e:auto_generated.aneb
-ageb <= <GND>
-
-
-|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2|LPM_COMPARE:inst_compare|cmpr_62e:auto_generated
-aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
-aneb <= aneb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
-dataa[0] => data_wire[0].IN0
-dataa[1] => data_wire[0].IN0
-dataa[2] => data_wire[1].IN0
-dataa[3] => data_wire[1].IN0
-datab[0] => data_wire[0].IN1
-datab[1] => data_wire[0].IN1
-datab[2] => data_wire[1].IN1
-datab[3] => data_wire[1].IN1
-
-
-|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2|LPM_COUNTER:inst_counter
-clock => cntr_0ig:auto_generated.clock
-clk_en => ~NO_FANOUT~
-cnt_en => cntr_0ig:auto_generated.cnt_en
-updown => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-aset => ~NO_FANOUT~
-aconst => ~NO_FANOUT~
-aload => ~NO_FANOUT~
-sclr => ~NO_FANOUT~
-sset => ~NO_FANOUT~
-sconst => ~NO_FANOUT~
-sload => ~NO_FANOUT~
-data[0] => ~NO_FANOUT~
-data[1] => ~NO_FANOUT~
-data[2] => ~NO_FANOUT~
-data[3] => ~NO_FANOUT~
-cin => ~NO_FANOUT~
-q[0] <= cntr_0ig:auto_generated.q[0]
-q[1] <= cntr_0ig:auto_generated.q[1]
-q[2] <= cntr_0ig:auto_generated.q[2]
-q[3] <= cntr_0ig:auto_generated.q[3]
-cout <= <GND>
-eq[0] <= <GND>
-eq[1] <= <GND>
-eq[2] <= <GND>
-eq[3] <= <GND>
-eq[4] <= <GND>
-eq[5] <= <GND>
-eq[6] <= <GND>
-eq[7] <= <GND>
-eq[8] <= <GND>
-eq[9] <= <GND>
-eq[10] <= <GND>
-eq[11] <= <GND>
-eq[12] <= <GND>
-eq[13] <= <GND>
-eq[14] <= <GND>
-eq[15] <= <GND>
-
-
-|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2|LPM_COUNTER:inst_counter|cntr_0ig:auto_generated
-clock => counter_reg_bit1a[3].CLK
-clock => counter_reg_bit1a[2].CLK
-clock => counter_reg_bit1a[1].CLK
-clock => counter_reg_bit1a[0].CLK
-cnt_en => _.IN1
-q[0] <= counter_reg_bit1a[0].REGOUT
-q[1] <= counter_reg_bit1a[1].REGOUT
-q[2] <= counter_reg_bit1a[2].REGOUT
-q[3] <= counter_reg_bit1a[3].REGOUT
-
-
-|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2|LPM_CONSTANT:inst_zeroes
-result[0] <= <GND>
-result[1] <= <GND>
-result[2] <= <GND>
-result[3] <= <GND>
-
-
 |g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst5
 pulse <= inst3.DB_MAX_OUTPUT_PORT_TYPE
 button => inst.IN0
@@ -14631,6 +14526,106 @@ q[3] <= counter_reg_bit1a[3].REGOUT
 
 
 |g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst6|LPM_CONSTANT:inst_zeroes
+result[0] <= <GND>
+result[1] <= <GND>
+result[2] <= <GND>
+result[3] <= <GND>
+
+
+|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2
+pulse <= inst3.DB_MAX_OUTPUT_PORT_TYPE
+button => inst.IN0
+clk => LPM_COUNTER:inst_counter.clock
+clk => inst3.CLK
+
+
+|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2|LPM_COMPARE:inst_compare
+dataa[0] => cmpr_62e:auto_generated.dataa[0]
+dataa[1] => cmpr_62e:auto_generated.dataa[1]
+dataa[2] => cmpr_62e:auto_generated.dataa[2]
+dataa[3] => cmpr_62e:auto_generated.dataa[3]
+datab[0] => cmpr_62e:auto_generated.datab[0]
+datab[1] => cmpr_62e:auto_generated.datab[1]
+datab[2] => cmpr_62e:auto_generated.datab[2]
+datab[3] => cmpr_62e:auto_generated.datab[3]
+clock => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+clken => ~NO_FANOUT~
+alb <= <GND>
+aeb <= cmpr_62e:auto_generated.aeb
+agb <= <GND>
+aleb <= <GND>
+aneb <= cmpr_62e:auto_generated.aneb
+ageb <= <GND>
+
+
+|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2|LPM_COMPARE:inst_compare|cmpr_62e:auto_generated
+aeb <= aeb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+aneb <= aneb_result_wire[0].DB_MAX_OUTPUT_PORT_TYPE
+dataa[0] => data_wire[0].IN0
+dataa[1] => data_wire[0].IN0
+dataa[2] => data_wire[1].IN0
+dataa[3] => data_wire[1].IN0
+datab[0] => data_wire[0].IN1
+datab[1] => data_wire[0].IN1
+datab[2] => data_wire[1].IN1
+datab[3] => data_wire[1].IN1
+
+
+|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2|LPM_COUNTER:inst_counter
+clock => cntr_0ig:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => cntr_0ig:auto_generated.cnt_en
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+q[0] <= cntr_0ig:auto_generated.q[0]
+q[1] <= cntr_0ig:auto_generated.q[1]
+q[2] <= cntr_0ig:auto_generated.q[2]
+q[3] <= cntr_0ig:auto_generated.q[3]
+cout <= <GND>
+eq[0] <= <GND>
+eq[1] <= <GND>
+eq[2] <= <GND>
+eq[3] <= <GND>
+eq[4] <= <GND>
+eq[5] <= <GND>
+eq[6] <= <GND>
+eq[7] <= <GND>
+eq[8] <= <GND>
+eq[9] <= <GND>
+eq[10] <= <GND>
+eq[11] <= <GND>
+eq[12] <= <GND>
+eq[13] <= <GND>
+eq[14] <= <GND>
+eq[15] <= <GND>
+
+
+|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2|LPM_COUNTER:inst_counter|cntr_0ig:auto_generated
+clock => counter_reg_bit1a[3].CLK
+clock => counter_reg_bit1a[2].CLK
+clock => counter_reg_bit1a[1].CLK
+clock => counter_reg_bit1a[0].CLK
+cnt_en => _.IN1
+q[0] <= counter_reg_bit1a[0].REGOUT
+q[1] <= counter_reg_bit1a[1].REGOUT
+q[2] <= counter_reg_bit1a[2].REGOUT
+q[3] <= counter_reg_bit1a[3].REGOUT
+
+
+|g58_crazy8|g58_human_player:inst2|g58_pulse_gen:inst2|LPM_CONSTANT:inst_zeroes
 result[0] <= <GND>
 result[1] <= <GND>
 result[2] <= <GND>
@@ -42328,7 +42323,7 @@ q[5] <= dffs[5].DB_MAX_OUTPUT_PORT_TYPE
 
 |g58_crazy8|LPM_CONSTANT:inst17
 result[0] <= <VCC>
-result[1] <= <VCC>
+result[1] <= <GND>
 result[2] <= <VCC>
 result[3] <= <GND>
 result[4] <= <GND>

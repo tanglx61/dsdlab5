@@ -18,7 +18,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "04/06/2017 02:44:35"
+// Generated on "04/06/2017 03:00:34"
                                                                         
 // Verilog Self-Checking Test Bench (with test vectors) for design :    g58_crazy8
 // 
@@ -1195,12 +1195,18 @@ end
 initial
 begin
 	play_button = 1'b0;
+	play_button = #5470000 1'b1;
+	play_button = #110000 1'b0;
 end 
 
 // up_button
 initial
 begin
 	up_button = 1'b0;
+	up_button = #2090000 1'b1;
+	up_button = #150000 1'b0;
+	up_button = #400000 1'b1;
+	up_button = #190000 1'b0;
 end 
 
 g58_crazy8_vlg_sample_tst tb_sample (

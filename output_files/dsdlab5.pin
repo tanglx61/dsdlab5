@@ -70,13 +70,13 @@ Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage 
 -------------------------------------------------------------------------------------------------------------
 GND                          : A1        : gnd    :                   :         :           :                
 VCCIO3                       : A2        : power  :                   : 3.3V    : 3         :                
-GND*                         : A3        :        :                   :         : 3         :                
+top_card[4]                  : A3        : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : A4        :        :                   :         : 3         :                
 GND*                         : A5        :        :                   :         : 3         :                
 GND*                         : A6        :        :                   :         : 3         :                
 GND*                         : A7        :        :                   :         : 3         :                
-GND*                         : A8        :        :                   :         : 3         :                
-GND*                         : A9        :        :                   :         : 3         :                
+human_current_card[5]        : A8        : output : 3.3-V LVTTL       :         : 3         : N              
+human_num_cards[5]           : A9        : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : A10       :        :                   :         : 3         :                
 GND*                         : A11       :        :                   :         : 3         :                
 GND+                         : A12       :        :                   :         : 4         :                
@@ -92,15 +92,15 @@ VCCIO4                       : A21       : power  :                   : 3.3V    
 GND                          : A22       : gnd    :                   :         :           :                
 VCCIO1                       : AA1       : power  :                   : 3.3V    : 1         :                
 GND                          : AA2       : gnd    :                   :         :           :                
-player_turn                  : AA3       : output : 3.3-V LVTTL       :         : 8         : N              
-comp_done                    : AA4       : input  : 3.3-V LVTTL       :         : 8         : N              
-num_cards_player[4]          : AA5       : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AA3       :        :                   :         : 8         :                
+GND*                         : AA4       :        :                   :         : 8         :                
+GND*                         : AA5       :        :                   :         : 8         :                
 GND*                         : AA6       :        :                   :         : 8         :                
 GND*                         : AA7       :        :                   :         : 8         :                
 GND*                         : AA8       :        :                   :         : 8         :                
 GND*                         : AA9       :        :                   :         : 8         :                
-GND*                         : AA10      :        :                   :         : 8         :                
-GND*                         : AA11      :        :                   :         : 8         :                
+card_dealt[1]                : AA10      : output : 3.3-V LVTTL       :         : 8         : N              
+card_dealt[4]                : AA11      : output : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : AA12      :        :                   :         : 7         :                
 GND*                         : AA13      :        :                   :         : 7         :                
 GND*                         : AA14      :        :                   :         : 7         :                
@@ -114,15 +114,15 @@ GND                          : AA21      : gnd    :                   :         
 VCCIO6                       : AA22      : power  :                   : 3.3V    : 6         :                
 GND                          : AB1       : gnd    :                   :         :           :                
 VCCIO8                       : AB2       : power  :                   : 3.3V    : 8         :                
-num_cards_player[2]          : AB3       : input  : 3.3-V LVTTL       :         : 8         : N              
-player_done                  : AB4       : input  : 3.3-V LVTTL       :         : 8         : N              
-num_cards_player[5]          : AB5       : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : AB3       :        :                   :         : 8         :                
+GND*                         : AB4       :        :                   :         : 8         :                
+GND*                         : AB5       :        :                   :         : 8         :                
 GND*                         : AB6       :        :                   :         : 8         :                
 GND*                         : AB7       :        :                   :         : 8         :                
 GND*                         : AB8       :        :                   :         : 8         :                
 GND*                         : AB9       :        :                   :         : 8         :                
-GND*                         : AB10      :        :                   :         : 8         :                
-GND*                         : AB11      :        :                   :         : 8         :                
+card_dealt[2]                : AB10      : output : 3.3-V LVTTL       :         : 8         : N              
+card_dealt[3]                : AB11      : output : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : AB12      :        :                   :         : 7         :                
 GND*                         : AB13      :        :                   :         : 7         :                
 GND*                         : AB14      :        :                   :         : 7         :                
@@ -141,9 +141,9 @@ GND*                         : B4        :        :                   :         
 GND*                         : B5        :        :                   :         : 3         :                
 GND*                         : B6        :        :                   :         : 3         :                
 GND*                         : B7        :        :                   :         : 3         :                
-GND*                         : B8        :        :                   :         : 3         :                
-GND*                         : B9        :        :                   :         : 3         :                
-GND*                         : B10       :        :                   :         : 3         :                
+human_num_cards[3]           : B8        : output : 3.3-V LVTTL       :         : 3         : N              
+human_num_cards[4]           : B9        : output : 3.3-V LVTTL       :         : 3         : N              
+top_card[1]                  : B10       : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : B11       :        :                   :         : 3         :                
 GND+                         : B12       :        :                   :         : 4         :                
 GND*                         : B13       :        :                   :         : 4         :                
@@ -168,7 +168,7 @@ GND*                         : C9        :        :                   :         
 GND*                         : C10       :        :                   :         : 3         :                
 VCCIO3                       : C11       : power  :                   : 3.3V    : 3         :                
 VCCIO4                       : C12       : power  :                   : 3.3V    : 4         :                
-GND*                         : C13       :        :                   :         : 4         :                
+top_card[3]                  : C13       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : C14       :        :                   :         : 4         :                
 GND                          : C15       : gnd    :                   :         :           :                
 GND*                         : C16       :        :                   :         : 4         :                
@@ -186,7 +186,7 @@ GND*                         : D5        :        :                   :         
 GND*                         : D6        :        :                   :         : 2         :                
 GND*                         : D7        :        :                   :         : 3         :                
 GND*                         : D8        :        :                   :         : 3         :                
-GND*                         : D9        :        :                   :         : 3         :                
+human_current_card[2]        : D9        : output : 3.3-V LVTTL       :         : 3         : N              
 GND                          : D10       : gnd    :                   :         :           :                
 GND*                         : D11       :        :                   :         : 3         :                
 GND+                         : D12       :        :                   :         : 3         :                
@@ -200,15 +200,15 @@ GND*                         : D19       :        :                   :         
 GND*                         : D20       :        :                   :         : 5         :                
 GND*                         : D21       :        :                   :         : 5         :                
 GND*                         : D22       :        :                   :         : 5         :                
-GND*                         : E1        :        :                   :         : 2         :                
-GND*                         : E2        :        :                   :         : 2         :                
+play_button                  : E1        : input  : 3.3-V LVTTL       :         : 2         : N              
+comp_num_cards[3]            : E2        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : E3        :        :                   :         : 2         :                
 GND*                         : E4        :        :                   :         : 2         :                
 VCCD_PLL3                    : E5        : power  :                   : 1.2V    :           :                
 VCCA_PLL3                    : E6        : power  :                   : 1.2V    :           :                
 GND*                         : E7        :        :                   :         : 3         :                
 GND*                         : E8        :        :                   :         : 3         :                
-GND*                         : E9        :        :                   :         : 3         :                
+human_num_cards[2]           : E9        : output : 3.3-V LVTTL       :         : 3         : N              
 VCCIO3                       : E10       : power  :                   : 3.3V    : 3         :                
 GND*                         : E11       :        :                   :         : 3         :                
 GND+                         : E12       :        :                   :         : 3         :                
@@ -222,8 +222,8 @@ GND*                         : E19       :        :                   :         
 GND*                         : E20       :        :                   :         : 5         :                
 GND*                         : E21       :        :                   :         : 5         :                
 GND*                         : E22       :        :                   :         : 5         :                
-GND*                         : F1        :        :                   :         : 2         :                
-GND*                         : F2        :        :                   :         : 2         :                
+up_button                    : F1        : input  : 3.3-V LVTTL       :         : 2         : N              
+comp_num_cards[2]            : F2        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : F3        :        :                   :         : 2         :                
 GND*                         : F4        :        :                   :         : 2         :                
 GND_PLL3                     : F5        : gnd    :                   :         :           :                
@@ -231,8 +231,8 @@ GND_PLL3                     : F6        : gnd    :                   :         
 GNDA_PLL3                    : F7        : gnd    :                   :         :           :                
 GND*                         : F8        :        :                   :         : 3         :                
 GND*                         : F9        :        :                   :         : 3         :                
-GND*                         : F10       :        :                   :         : 3         :                
-GND*                         : F11       :        :                   :         : 3         :                
+human_current_card[1]        : F10       : output : 3.3-V LVTTL       :         : 3         : N              
+human_current_card[3]        : F11       : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : F12       :        :                   :         : 4         :                
 GND*                         : F13       :        :                   :         : 4         :                
 GND*                         : F14       :        :                   :         : 4         :                
@@ -266,19 +266,19 @@ VCCIO5                       : G19       : power  :                   : 3.3V    
 GND*                         : G20       :        :                   :         : 5         :                
 GND*                         : G21       :        :                   :         : 5         :                
 GND*                         : G22       :        :                   :         : 5         :                
-GND*                         : H1        :        :                   :         : 2         :                
-GND*                         : H2        :        :                   :         : 2         :                
-GND*                         : H3        :        :                   :         : 2         :                
+comp_num_cards[1]            : H1        : output : 3.3-V LVTTL       :         : 2         : N              
+playing_deck_num_cards[1]    : H2        : output : 3.3-V LVTTL       :         : 2         : N              
+playing_deck_num_cards[5]    : H3        : output : 3.3-V LVTTL       :         : 2         : N              
 GND*                         : H4        :        :                   :         : 2         :                
 GND*                         : H5        :        :                   :         : 2         :                
 GND*                         : H6        :        :                   :         : 2         :                
 GND*                         : H7        :        :                   :         : 3         :                
 GND*                         : H8        :        :                   :         : 3         :                
-GND*                         : H9        :        :                   :         : 3         :                
-GND*                         : H10       :        :                   :         : 3         :                
+human_num_cards[1]           : H9        : output : 3.3-V LVTTL       :         : 3         : N              
+human_num_cards[0]           : H10       : output : 3.3-V LVTTL       :         : 3         : N              
 GND*                         : H11       :        :                   :         : 3         :                
-GND*                         : H12       :        :                   :         : 4         :                
-GND*                         : H13       :        :                   :         : 4         :                
+top_card[5]                  : H12       : output : 3.3-V LVTTL       :         : 4         : N              
+top_card[2]                  : H13       : output : 3.3-V LVTTL       :         : 4         : N              
 GND*                         : H14       :        :                   :         : 4         :                
 GND*                         : H15       :        :                   :         : 4         :                
 GND*                         : H16       :        :                   :         : 5         :                
@@ -288,10 +288,10 @@ GND*                         : H19       :        :                   :         
 GND                          : H20       : gnd    :                   :         :           :                
 NC                           : H21       :        :                   :         :           :                
 NC                           : H22       :        :                   :         :           :                
-GND*                         : J1        :        :                   :         : 2         :                
-GND*                         : J2        :        :                   :         : 2         :                
+playing_deck_num_cards[2]    : J1        : output : 3.3-V LVTTL       :         : 2         : N              
+card_ready                   : J2        : output : 3.3-V LVTTL       :         : 2         : N              
 NC                           : J3        :        :                   :         :           :                
-GND*                         : J4        :        :                   :         : 2         :                
+playing_deck_num_cards[0]    : J4        : output : 3.3-V LVTTL       :         : 2         : N              
 NC                           : J5        :        :                   :         :           :                
 NC                           : J6        :        :                   :         :           :                
 VCCIO2                       : J7        : power  :                   : 3.3V    : 2         :                
@@ -329,7 +329,7 @@ GND                          : K16       : gnd    :                   :         
 NC                           : K17       :        :                   :         :           :                
 NC                           : K18       :        :                   :         :           :                
 GND                          : K19       : gnd    :                   :         :           :                
-GND*                         : K20       :        :                   :         : 5         :                
+illegal_play                 : K20       : output : 3.3-V LVTTL       :         : 5         : N              
 GND*                         : K21       :        :                   :         : 5         :                
 GND*                         : K22       :        :                   :         : 5         :                
 GND+                         : L1        :        :                   :         : 2         :                
@@ -339,7 +339,7 @@ nCONFIG                      : L4        :        :                   :         
 TDO                          : L5        : output :                   :         : 2         :                
 DCLK                         : L6        :        :                   :         : 2         :                
 NC                           : L7        :        :                   :         :           :                
-GND*                         : L8        :        :                   :         : 2         :                
+deal_comp                    : L8        : output : 3.3-V LVTTL       :         : 2         : N              
 VCCINT                       : L9        : power  :                   : 1.2V    :           :                
 GND                          : L10       : gnd    :                   :         :           :                
 GND                          : L11       : gnd    :                   :         :           :                
@@ -355,11 +355,11 @@ VCCIO5                       : L20       : power  :                   : 3.3V    
 GND+                         : L21       :        :                   :         : 5         :                
 GND+                         : L22       :        :                   :         : 5         :                
 clk                          : M1        : input  : 3.3-V LVTTL       :         : 1         : N              
-rst                          : M2        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND+                         : M2        :        :                   :         : 1         :                
 VCCIO1                       : M3        : power  :                   : 3.3V    : 1         :                
 GND                          : M4        : gnd    :                   :         :           :                
-GND*                         : M5        :        :                   :         : 1         :                
-GND*                         : M6        :        :                   :         : 1         :                
+deal_player                  : M5        : output : 3.3-V LVTTL       :         : 1         : N              
+playing_deck_num_cards[4]    : M6        : output : 3.3-V LVTTL       :         : 1         : N              
 NC                           : M7        :        :                   :         :           :                
 NC                           : M8        :        :                   :         :           :                
 VCCINT                       : M9        : power  :                   : 1.2V    :           :                
@@ -376,12 +376,12 @@ GND*                         : M19       :        :                   :         
 VCCIO6                       : M20       : power  :                   : 3.3V    : 6         :                
 GND+                         : M21       :        :                   :         : 6         :                
 GND+                         : M22       :        :                   :         : 6         :                
-GND*                         : N1        :        :                   :         : 1         :                
-GND*                         : N2        :        :                   :         : 1         :                
-GND*                         : N3        :        :                   :         : 1         :                
-GND*                         : N4        :        :                   :         : 1         :                
+player_turn                  : N1        : output : 3.3-V LVTTL       :         : 1         : N              
+init_button                  : N2        : input  : 3.3-V LVTTL       :         : 1         : N              
+down_button                  : N3        : input  : 3.3-V LVTTL       :         : 1         : N              
+tie                          : N4        : output : 3.3-V LVTTL       :         : 1         : N              
 NC                           : N5        :        :                   :         :           :                
-GND*                         : N6        :        :                   :         : 1         :                
+comp_num_cards[4]            : N6        : output : 3.3-V LVTTL       :         : 1         : N              
 GND                          : N7        : gnd    :                   :         :           :                
 NC                           : N8        :        :                   :         :           :                
 VCCINT                       : N9        : power  :                   : 1.2V    :           :                
@@ -398,12 +398,12 @@ GND                          : N19       : gnd    :                   :         
 nSTATUS                      : N20       :        :                   :         : 6         :                
 GND*                         : N21       :        :                   :         : 6         :                
 GND*                         : N22       :        :                   :         : 6         :                
-GND*                         : P1        :        :                   :         : 1         :                
-GND*                         : P2        :        :                   :         : 1         :                
-GND*                         : P3        :        :                   :         : 1         :                
+playing_deck_num_cards[3]    : P1        : output : 3.3-V LVTTL       :         : 1         : N              
+comp_num_cards[5]            : P2        : output : 3.3-V LVTTL       :         : 1         : N              
+player_won                   : P3        : output : 3.3-V LVTTL       :         : 1         : N              
 NC                           : P4        :        :                   :         :           :                
-GND*                         : P5        :        :                   :         : 1         :                
-GND*                         : P6        :        :                   :         : 1         :                
+comp_num_cards[0]            : P5        : output : 3.3-V LVTTL       :         : 1         : N              
+draw_button                  : P6        : input  : 3.3-V LVTTL       :         : 1         : N              
 VCCIO1                       : P7        : power  :                   : 3.3V    : 1         :                
 GND*                         : P8        :        :                   :         : 8         :                
 GND*                         : P9        :        :                   :         : 8         :                
@@ -424,12 +424,12 @@ GND*                         : R1        :        :                   :         
 GND*                         : R2        :        :                   :         : 1         :                
 GND                          : R3        : gnd    :                   :         :           :                
 NC                           : R4        :        :                   :         :           :                
-num_cards_comp[3]            : R5        : input  : 3.3-V LVTTL       :         : 1         : N              
-num_cards_comp[5]            : R6        : input  : 3.3-V LVTTL       :         : 1         : N              
-GND*                         : R7        :        :                   :         : 1         :                
-GND*                         : R8        :        :                   :         : 1         :                
+GND*                         : R5        :        :                   :         : 1         :                
+GND*                         : R6        :        :                   :         : 1         :                
+comp_won                     : R7        : output : 3.3-V LVTTL       :         : 1         : N              
+comp_turn                    : R8        : output : 3.3-V LVTTL       :         : 1         : N              
 GND*                         : R9        :        :                   :         : 8         :                
-GND*                         : R10       :        :                   :         : 8         :                
+human_current_card[4]        : R10       : output : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : R11       :        :                   :         : 8         :                
 GND*                         : R12       :        :                   :         : 7         :                
 GND*                         : R13       :        :                   :         : 7         :                
@@ -437,22 +437,22 @@ GND*                         : R14       :        :                   :         
 GND*                         : R15       :        :                   :         : 7         :                
 GND*                         : R16       :        :                   :         : 7         :                
 GND*                         : R17       :        :                   :         : 6         :                
-GND*                         : R18       :        :                   :         : 6         :                
+top_card[0]                  : R18       : output : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : R19       :        :                   :         : 6         :                
 GND*                         : R20       :        :                   :         : 6         :                
 GND*                         : R21       :        :                   :         : 6         :                
 GND*                         : R22       :        :                   :         : 6         :                
 GND*                         : T1        :        :                   :         : 1         :                
 GND*                         : T2        :        :                   :         : 1         :                
-num_cards_deck[5]            : T3        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : T3        :        :                   :         : 1         :                
 VCCIO1                       : T4        : power  :                   : 3.3V    : 1         :                
 GND*                         : T5        :        :                   :         : 1         :                
-num_cards_deck[4]            : T6        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : T6        :        :                   :         : 1         :                
 GND*                         : T7        :        :                   :         : 8         :                
-comp_turn                    : T8        : output : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : T8        :        :                   :         : 8         :                
 VCCIO8                       : T9        : power  :                   : 3.3V    : 8         :                
 GND                          : T10       : gnd    :                   :         :           :                
-GND*                         : T11       :        :                   :         : 8         :                
+human_current_card[0]        : T11       : output : 3.3-V LVTTL       :         : 8         : N              
 GND*                         : T12       :        :                   :         : 7         :                
 GND                          : T13       : gnd    :                   :         :           :                
 VCCIO7                       : T14       : power  :                   : 3.3V    : 7         :                
@@ -465,9 +465,9 @@ GND                          : T20       : gnd    :                   :         
 GND*                         : T21       :        :                   :         : 6         :                
 GND*                         : T22       :        :                   :         : 6         :                
 GND*                         : U1        :        :                   :         : 1         :                
-num_cards_comp[4]            : U2        : input  : 3.3-V LVTTL       :         : 1         : N              
-num_cards_deck[2]            : U3        : input  : 3.3-V LVTTL       :         : 1         : N              
-tie                          : U4        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : U2        :        :                   :         : 1         :                
+GND*                         : U3        :        :                   :         : 1         :                
+GND*                         : U4        :        :                   :         : 1         :                
 GND_PLL1                     : U5        : gnd    :                   :         :           :                
 VCCD_PLL1                    : U6        : power  :                   : 1.2V    :           :                
 VCCA_PLL1                    : U7        : power  :                   : 1.2V    :           :                
@@ -487,16 +487,16 @@ GND*                         : U20       :        :                   :         
 GND*                         : U21       :        :                   :         : 6         :                
 GND*                         : U22       :        :                   :         : 6         :                
 GND*                         : V1        :        :                   :         : 1         :                
-num_cards_deck[3]            : V2        : input  : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : V2        :        :                   :         : 1         :                
 GND                          : V3        : gnd    :                   :         :           :                
-comp_won                     : V4        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : V4        :        :                   :         : 1         :                
 GND_PLL1                     : V5        : gnd    :                   :         :           :                
 GND                          : V6        : gnd    :                   :         :           :                
 GNDA_PLL1                    : V7        : gnd    :                   :         :           :                
 GND*                         : V8        :        :                   :         : 8         :                
 GND*                         : V9        :        :                   :         : 8         :                
 VCCIO8                       : V10       : power  :                   : 3.3V    : 8         :                
-GND*                         : V11       :        :                   :         : 8         :                
+card_dealt[0]                : V11       : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : V12       :        :                   :         : 7         :                
 VCCIO7                       : V13       : power  :                   : 3.3V    : 7         :                
 GND*                         : V14       :        :                   :         : 7         :                
@@ -508,17 +508,17 @@ GND*                         : V19       :        :                   :         
 GND*                         : V20       :        :                   :         : 6         :                
 GND*                         : V21       :        :                   :         : 6         :                
 GND*                         : V22       :        :                   :         : 6         :                
-num_cards_deck[1]            : W1        : input  : 3.3-V LVTTL       :         : 1         : N              
-num_cards_deck[0]            : W2        : input  : 3.3-V LVTTL       :         : 1         : N              
-deal_comp                    : W3        : output : 3.3-V LVTTL       :         : 1         : N              
-num_cards_player[1]          : W4        : input  : 3.3-V LVTTL       :         : 1         : N              
-player_won                   : W5        : output : 3.3-V LVTTL       :         : 1         : N              
+GND*                         : W1        :        :                   :         : 1         :                
+GND*                         : W2        :        :                   :         : 1         :                
+GND*                         : W3        :        :                   :         : 1         :                
+GND*                         : W4        :        :                   :         : 1         :                
+GND*                         : W5        :        :                   :         : 1         :                
 VCCIO8                       : W6        : power  :                   : 3.3V    : 8         :                
 GND*                         : W7        :        :                   :         : 8         :                
 GND*                         : W8        :        :                   :         : 8         :                
 GND*                         : W9        :        :                   :         : 8         :                
 GND                          : W10       : gnd    :                   :         :           :                
-GND*                         : W11       :        :                   :         : 8         :                
+card_dealt[5]                : W11       : output : 3.3-V LVTTL       :         : 8         : N              
 GND+                         : W12       :        :                   :         : 7         :                
 GND                          : W13       : gnd    :                   :         :           :                
 GND*                         : W14       :        :                   :         : 7         :                
@@ -530,12 +530,12 @@ GND                          : W19       : gnd    :                   :         
 ~LVDS91p/nCEO~               : W20       : output : 3.3-V LVTTL       :         : 6         : N              
 GND*                         : W21       :        :                   :         : 6         :                
 GND*                         : W22       :        :                   :         : 6         :                
-num_cards_comp[0]            : Y1        : input  : 3.3-V LVTTL       :         : 1         : N              
-deal_player                  : Y2        : output : 3.3-V LVTTL       :         : 1         : N              
-num_cards_comp[1]            : Y3        : input  : 3.3-V LVTTL       :         : 1         : N              
-num_cards_comp[2]            : Y4        : input  : 3.3-V LVTTL       :         : 1         : N              
-num_cards_player[0]          : Y5        : input  : 3.3-V LVTTL       :         : 8         : N              
-num_cards_player[3]          : Y6        : input  : 3.3-V LVTTL       :         : 8         : N              
+GND*                         : Y1        :        :                   :         : 1         :                
+GND*                         : Y2        :        :                   :         : 1         :                
+GND*                         : Y3        :        :                   :         : 1         :                
+GND*                         : Y4        :        :                   :         : 1         :                
+GND*                         : Y5        :        :                   :         : 8         :                
+GND*                         : Y6        :        :                   :         : 8         :                
 GND*                         : Y7        :        :                   :         : 8         :                
 GND                          : Y8        : gnd    :                   :         :           :                
 GND*                         : Y9        :        :                   :         : 8         :                

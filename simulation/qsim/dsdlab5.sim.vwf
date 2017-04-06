@@ -1643,7 +1643,9 @@ TRANSITION_LIST("play_button")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10000.0;
+		LEVEL 0 FOR 5470.0;
+		LEVEL 1 FOR 110.0;
+		LEVEL 0 FOR 4420.0;
 	}
 }
 TRANSITION_LIST("up_button")
@@ -1651,7 +1653,11 @@ TRANSITION_LIST("up_button")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10000.0;
+		LEVEL 0 FOR 2090.0;
+		LEVEL 1 FOR 150.0;
+		LEVEL 0 FOR 400.0;
+		LEVEL 1 FOR 190.0;
+		LEVEL 0 FOR 7170.0;
 	}
 }
 TRANSITION_LIST("comp_won")
@@ -1734,7 +1740,8 @@ TRANSITION_LIST("comp_num_cards[0]")
 		LEVEL 0 FOR 320.0;
 		LEVEL 1 FOR 320.0;
 		LEVEL 0 FOR 320.0;
-		LEVEL 1 FOR 5770.0;
+		LEVEL 1 FOR 1540.0;
+		LEVEL 0 FOR 4230.0;
 	}
 }
 TRANSITION_LIST("human_num_cards[5]")
@@ -1793,7 +1800,8 @@ TRANSITION_LIST("human_num_cards[0]")
 		LEVEL 0 FOR 320.0;
 		LEVEL 1 FOR 320.0;
 		LEVEL 0 FOR 320.0;
-		LEVEL 1 FOR 8010.0;
+		LEVEL 1 FOR 3540.0;
+		LEVEL 0 FOR 4470.0;
 	}
 }
 TRANSITION_LIST("top_card[5]")
@@ -1833,7 +1841,7 @@ TRANSITION_LIST("top_card[1]")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 10000.0;
+		LEVEL 0 FOR 10000.0;
 	}
 }
 TRANSITION_LIST("top_card[0]")
@@ -1947,7 +1955,9 @@ TRANSITION_LIST("comp_turn")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 0 FOR 10000.0;
+		LEVEL 0 FOR 5530.0;
+		LEVEL 1 FOR 240.0;
+		LEVEL 0 FOR 4230.0;
 	}
 }
 TRANSITION_LIST("player_turn")
@@ -1956,7 +1966,9 @@ TRANSITION_LIST("player_turn")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 4250.0;
-		LEVEL 1 FOR 5750.0;
+		LEVEL 1 FOR 1280.0;
+		LEVEL 0 FOR 240.0;
+		LEVEL 1 FOR 4230.0;
 	}
 }
 TRANSITION_LIST("card_dealt[5]")
@@ -2123,7 +2135,8 @@ TRANSITION_LIST("human_current_card[5]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 1990.0;
-		LEVEL 1 FOR 8010.0;
+		LEVEL 1 FOR 140.0;
+		LEVEL 0 FOR 7870.0;
 	}
 }
 TRANSITION_LIST("human_current_card[4]")
@@ -2135,7 +2148,10 @@ TRANSITION_LIST("human_current_card[4]")
 		LEVEL 1 FOR 640.0;
 		LEVEL 0 FOR 320.0;
 		LEVEL 1 FOR 320.0;
-		LEVEL 0 FOR 8010.0;
+		LEVEL 0 FOR 140.0;
+		LEVEL 1 FOR 540.0;
+		LEVEL 0 FOR 2860.0;
+		LEVEL 1 FOR 4470.0;
 	}
 }
 TRANSITION_LIST("human_current_card[3]")
@@ -2145,7 +2161,9 @@ TRANSITION_LIST("human_current_card[3]")
 		REPEAT = 1;
 		LEVEL 0 FOR 1670.0;
 		LEVEL 1 FOR 320.0;
-		LEVEL 0 FOR 8010.0;
+		LEVEL 0 FOR 140.0;
+		LEVEL 1 FOR 540.0;
+		LEVEL 0 FOR 7330.0;
 	}
 }
 TRANSITION_LIST("human_current_card[2]")
@@ -2157,7 +2175,8 @@ TRANSITION_LIST("human_current_card[2]")
 		LEVEL 1 FOR 320.0;
 		LEVEL 0 FOR 320.0;
 		LEVEL 1 FOR 320.0;
-		LEVEL 0 FOR 8650.0;
+		LEVEL 0 FOR 4180.0;
+		LEVEL 1 FOR 4470.0;
 	}
 }
 TRANSITION_LIST("human_current_card[1]")
@@ -2168,7 +2187,9 @@ TRANSITION_LIST("human_current_card[1]")
 		LEVEL 0 FOR 710.0;
 		LEVEL 1 FOR 640.0;
 		LEVEL 0 FOR 320.0;
-		LEVEL 1 FOR 8330.0;
+		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 2860.0;
+		LEVEL 1 FOR 4470.0;
 	}
 }
 TRANSITION_LIST("human_current_card[0]")
@@ -2185,7 +2206,12 @@ TRANSITION_LIST("illegal_play")
 	NODE
 	{
 		REPEAT = 1;
-		LEVEL 1 FOR 10000.0;
+		LEVEL 0 FOR 1030.0;
+		LEVEL 1 FOR 320.0;
+		LEVEL 0 FOR 320.0;
+		LEVEL 1 FOR 1000.0;
+		LEVEL 0 FOR 2860.0;
+		LEVEL 1 FOR 4470.0;
 	}
 }
 
@@ -2670,7 +2696,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "human_current_card";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 49;
 	TREE_LEVEL = 0;
 	CHILDREN = 50, 51, 52, 53, 54, 55;
@@ -2680,7 +2706,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "human_current_card[5]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 50;
 	TREE_LEVEL = 1;
 	PARENT = 49;
@@ -2690,7 +2716,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "human_current_card[4]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 51;
 	TREE_LEVEL = 1;
 	PARENT = 49;
@@ -2700,7 +2726,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "human_current_card[3]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 52;
 	TREE_LEVEL = 1;
 	PARENT = 49;
@@ -2710,7 +2736,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "human_current_card[2]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 53;
 	TREE_LEVEL = 1;
 	PARENT = 49;
@@ -2720,7 +2746,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "human_current_card[1]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 54;
 	TREE_LEVEL = 1;
 	PARENT = 49;
@@ -2730,7 +2756,7 @@ DISPLAY_LINE
 {
 	CHANNEL = "human_current_card[0]";
 	EXPAND_STATUS = COLLAPSED;
-	RADIX = Binary;
+	RADIX = Unsigned;
 	TREE_INDEX = 55;
 	TREE_LEVEL = 1;
 	PARENT = 49;

@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Apr 06 02:43:00 2017
+Analysis & Synthesis Status : Successful - Thu Apr 06 02:56:48 2017
 Quartus II 64-Bit Version : 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition
 Revision Name : dsdlab5
 Top-level Entity Name : g58_crazy8
 Family : Cyclone II
-Total logic elements : 1,166
-    Total combinational functions : 1,160
-    Dedicated logic registers : 711
-Total registers : 711
+Total logic elements : 1,808
+    Total combinational functions : 1,803
+    Dedicated logic registers : 1,049
+Total registers : 1049
 Total pins : 51
 Total virtual pins : 0
-Total memory bits : 6,656
+Total memory bits : 9,984
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0

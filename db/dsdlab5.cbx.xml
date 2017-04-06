@@ -315,7 +315,7 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|g58_crazy8|g58_human_player:inst2|g58_stack52:inst|BUSMUX:inst25|LPM_MUX:$00000" CBX_FILE_NAME="mux_qmc.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g58_crazy8|g58_human_player:inst2|g58_stack52:inst|LPM_FF:inst50|LPM_CONSTANT:sc" CBX_FILE_NAME="lpm_constant_494.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g58_crazy8|g58_play_deck:inst11|g58_pulse_gen:inst11|LPM_CONSTANT:inst_zeroes" CBX_FILE_NAME="lpm_constant_174.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|g58_crazy8|LPM_CONSTANT:inst17" CBX_FILE_NAME="lpm_constant_c94.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|g58_crazy8|LPM_CONSTANT:inst17" CBX_FILE_NAME="lpm_constant_e94.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g58_crazy8|g58_human_player:inst2|g58_stack52:inst|LPM_FF:inst51|LPM_CONSTANT:sc" CBX_FILE_NAME="lpm_constant_394.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g58_crazy8|g58_comp_player:inst|g58_rules:inst2|g58_mod13:play_card_mod13|LPM_ADD_SUB:ADD1" CBX_FILE_NAME="add_sub_e8g.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|g58_crazy8|g58_comp_player:inst|g58_stack52:inst1|BUSMUX:inst40|LPM_MUX:$00000" CBX_FILE_NAME="mux_qmc.tdf"/>

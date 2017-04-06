@@ -18,13 +18,13 @@
 # Loading work.g58_crazy8
 # Loading cycloneii_ver.cycloneii_lcell_ff
 # Loading cycloneii_ver.cycloneii_lcell_comb
+# Loading cycloneii_ver.cycloneii_ram_block
+# Loading cycloneii_ver.cycloneii_ram_register
+# Loading cycloneii_ver.cycloneii_ram_pulse_generator
 # Loading cycloneii_ver.cycloneii_io
 # Loading cycloneii_ver.cycloneii_mux21
 # Loading cycloneii_ver.cycloneii_dffe
 # Loading cycloneii_ver.cycloneii_asynch_io
-# Loading cycloneii_ver.cycloneii_ram_block
-# Loading cycloneii_ver.cycloneii_ram_register
-# Loading cycloneii_ver.cycloneii_ram_pulse_generator
 # Loading work.g58_crazy8_vlg_sample_tst
 # Loading work.g58_crazy8_vlg_check_tst
 # Loading cycloneii_ver.CYCLONEII_PRIM_DFFE
@@ -60,13 +60,10 @@
 #      Real value = 110001
 # ERROR! Vector Mismatch for output port top_card[0] :: @time = 1000000.000 ps
 #      Expected value = 000000
-#      Real value = 000111
-# ERROR! Vector Mismatch for output port top_card[1] :: @time = 1000000.000 ps
-#      Expected value = 000000
-#      Real value = 000111
+#      Real value = 000101
 # ERROR! Vector Mismatch for output port top_card[2] :: @time = 1000000.000 ps
 #      Expected value = 000000
-#      Real value = 000111
+#      Real value = 000101
 # ERROR! Vector Mismatch for output port card_dealt[2] :: @time = 1020000.000 ps
 #      Expected value = 000000
 #      Real value = 010111
@@ -104,6 +101,9 @@
 #      Expected value = 000000
 #      Real value = 000100
 # ERROR! Vector Mismatch for output port player_turn :: @time = 4260000.000 ps
+#      Expected value = 0
+#      Real value = 1
+# ERROR! Vector Mismatch for output port comp_turn :: @time = 5540000.000 ps
 #      Expected value = 0
 #      Real value = 1
 #          25 mismatched vectors : Simulation failed !

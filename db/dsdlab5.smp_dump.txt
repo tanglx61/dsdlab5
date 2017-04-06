@@ -1,11 +1,8 @@
 
-State Machine - |g58_sys_ctrl_fsm_test|g58_sys_ctrl_fsm:inst|state
-Name state.W state.Y state.X state.D state.C state.B state.I state.A 
-state.A 0 0 0 0 0 0 0 0 
-state.I 0 0 0 0 0 0 1 1 
-state.B 0 0 0 0 0 1 0 1 
-state.C 0 0 0 0 1 0 0 1 
-state.D 0 0 0 1 0 0 0 1 
-state.X 0 0 1 0 0 0 0 1 
-state.Y 0 1 0 0 0 0 0 1 
-state.W 1 0 0 0 0 0 0 1 
+State Machine - |g58_comp_player|g58_comp_fsm:inst|y
+Name y.L y.D y.C y.B y.A 
+y.A 0 0 0 0 0 
+y.B 0 0 0 1 1 
+y.C 0 0 1 0 1 
+y.D 0 1 0 0 1 
+y.L 1 0 0 0 1 

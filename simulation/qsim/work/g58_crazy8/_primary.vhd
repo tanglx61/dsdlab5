@@ -12,6 +12,7 @@ entity g58_crazy8 is
         comp_turn       : out    vl_logic;
         card_dealt      : out    vl_logic_vector(5 downto 0);
         top_card        : out    vl_logic_vector(5 downto 0);
+        human_current_card: out    vl_logic_vector(5 downto 0);
         play_button     : in     vl_logic;
         draw_button     : in     vl_logic;
         up_button       : in     vl_logic;
@@ -21,7 +22,6 @@ entity g58_crazy8 is
         human_num_cards : out    vl_logic_vector(5 downto 0);
         comp_won        : out    vl_logic;
         tie             : out    vl_logic;
-        illegal_play    : out    vl_logic;
-        human_current_card: out    vl_logic_vector(5 downto 0)
+        illegal_play    : out    vl_logic
     );
 end g58_crazy8;

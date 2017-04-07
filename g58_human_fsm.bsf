@@ -89,9 +89,16 @@ applicable agreement for further details.
 	(port
 		(pt 272 80)
 		(output)
+		(text "CARD_PLAYED" (rect 0 0 77 12)(font "Arial" ))
+		(text "CARD_PLAYED" (rect 174 75 251 87)(font "Arial" ))
+		(line (pt 272 80)(pt 256 80)(line_width 1))
+	)
+	(port
+		(pt 272 96)
+		(output)
 		(text "STACK_MODE[1..0]" (rect 0 0 88 12)(font "Arial" ))
-		(text "STACK_MODE[1..0]" (rect 163 75 251 87)(font "Arial" ))
-		(line (pt 272 80)(pt 256 80)(line_width 3))
+		(text "STACK_MODE[1..0]" (rect 163 91 251 103)(font "Arial" ))
+		(line (pt 272 96)(pt 256 96)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 256 128)(line_width 1))

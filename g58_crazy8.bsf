@@ -1,0 +1,176 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 16 16 320 304)
+	(text "g58_crazy8" (rect 5 0 73 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 8 272 25 284)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "clk" (rect 21 27 36 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "init_button" (rect 0 0 57 14)(font "Arial" (font_size 8)))
+		(text "init_button" (rect 21 43 78 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "play_button" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "play_button" (rect 21 59 87 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "draw_button" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "draw_button" (rect 21 75 94 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "up_button" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "up_button" (rect 21 91 77 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "down_button" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "down_button" (rect 21 107 96 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 304 32)
+		(output)
+		(text "player_won" (rect 0 0 68 14)(font "Arial" (font_size 8)))
+		(text "player_won" (rect 215 27 283 41)(font "Arial" (font_size 8)))
+		(line (pt 304 32)(pt 288 32))
+	)
+	(port
+		(pt 304 48)
+		(output)
+		(text "comp_won" (rect 0 0 63 14)(font "Arial" (font_size 8)))
+		(text "comp_won" (rect 220 43 283 57)(font "Arial" (font_size 8)))
+		(line (pt 304 48)(pt 288 48))
+	)
+	(port
+		(pt 304 64)
+		(output)
+		(text "tie" (rect 0 0 12 14)(font "Arial" (font_size 8)))
+		(text "tie" (rect 271 59 283 73)(font "Arial" (font_size 8)))
+		(line (pt 304 64)(pt 288 64))
+	)
+	(port
+		(pt 304 80)
+		(output)
+		(text "human_current_card[5..0]" (rect 0 0 147 14)(font "Arial" (font_size 8)))
+		(text "human_current_card[5..0]" (rect 136 75 283 89)(font "Arial" (font_size 8)))
+		(line (pt 304 80)(pt 288 80)(line_width 3))
+	)
+	(port
+		(pt 304 96)
+		(output)
+		(text "playing_deck_num_cards[5..0]" (rect 0 0 173 14)(font "Arial" (font_size 8)))
+		(text "playing_deck_num_cards[5..0]" (rect 110 91 283 105)(font "Arial" (font_size 8)))
+		(line (pt 304 96)(pt 288 96)(line_width 3))
+	)
+	(port
+		(pt 304 112)
+		(output)
+		(text "human_num_cards[5..0]" (rect 0 0 136 14)(font "Arial" (font_size 8)))
+		(text "human_num_cards[5..0]" (rect 147 107 283 121)(font "Arial" (font_size 8)))
+		(line (pt 304 112)(pt 288 112)(line_width 3))
+	)
+	(port
+		(pt 304 128)
+		(output)
+		(text "comp_num_cards[5..0]" (rect 0 0 129 14)(font "Arial" (font_size 8)))
+		(text "comp_num_cards[5..0]" (rect 154 123 283 137)(font "Arial" (font_size 8)))
+		(line (pt 304 128)(pt 288 128)(line_width 3))
+	)
+	(port
+		(pt 304 144)
+		(output)
+		(text "top_card[5..0]" (rect 0 0 79 14)(font "Arial" (font_size 8)))
+		(text "top_card[5..0]" (rect 204 139 283 153)(font "Arial" (font_size 8)))
+		(line (pt 304 144)(pt 288 144)(line_width 3))
+	)
+	(port
+		(pt 304 160)
+		(output)
+		(text "illegal_play" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "illegal_play" (rect 222 155 283 169)(font "Arial" (font_size 8)))
+		(line (pt 304 160)(pt 288 160))
+	)
+	(port
+		(pt 304 176)
+		(output)
+		(text "deal_player" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "deal_player" (rect 217 171 283 185)(font "Arial" (font_size 8)))
+		(line (pt 304 176)(pt 288 176))
+	)
+	(port
+		(pt 304 192)
+		(output)
+		(text "deal_comp" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "deal_comp" (rect 222 187 283 201)(font "Arial" (font_size 8)))
+		(line (pt 304 192)(pt 288 192))
+	)
+	(port
+		(pt 304 208)
+		(output)
+		(text "player_turn" (rect 0 0 64 14)(font "Arial" (font_size 8)))
+		(text "player_turn" (rect 219 203 283 217)(font "Arial" (font_size 8)))
+		(line (pt 304 208)(pt 288 208))
+	)
+	(port
+		(pt 304 224)
+		(output)
+		(text "comp_turn" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "comp_turn" (rect 223 219 283 233)(font "Arial" (font_size 8)))
+		(line (pt 304 224)(pt 288 224))
+	)
+	(port
+		(pt 304 240)
+		(output)
+		(text "card_dealt[5..0]" (rect 0 0 88 14)(font "Arial" (font_size 8)))
+		(text "card_dealt[5..0]" (rect 195 235 283 249)(font "Arial" (font_size 8)))
+		(line (pt 304 240)(pt 288 240)(line_width 3))
+	)
+	(port
+		(pt 304 256)
+		(output)
+		(text "card_ready" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "card_ready" (rect 217 251 283 265)(font "Arial" (font_size 8)))
+		(line (pt 304 256)(pt 288 256))
+	)
+	(drawing
+		(rectangle (rect 16 16 288 272))
+	)
+)

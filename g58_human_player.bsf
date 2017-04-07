@@ -131,9 +131,16 @@ applicable agreement for further details.
 	(port
 		(pt 288 112)
 		(output)
+		(text "card_played" (rect 0 0 70 14)(font "Arial" (font_size 8)))
+		(text "card_played" (rect 197 107 267 121)(font "Arial" (font_size 8)))
+		(line (pt 288 112)(pt 272 112))
+	)
+	(port
+		(pt 288 128)
+		(output)
 		(text "addr[5..0]" (rect 0 0 54 14)(font "Arial" (font_size 8)))
-		(text "addr[5..0]" (rect 213 107 267 121)(font "Arial" (font_size 8)))
-		(line (pt 288 112)(pt 272 112)(line_width 3))
+		(text "addr[5..0]" (rect 213 123 267 137)(font "Arial" (font_size 8)))
+		(line (pt 288 128)(pt 272 128)(line_width 3))
 	)
 	(drawing
 		(rectangle (rect 16 16 272 208))

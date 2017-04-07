@@ -356,119 +356,6 @@ applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 312 312 600 504)
-	(text "g58_comp_player" (rect 5 0 106 14)(font "Arial" (font_size 8)))
-	(text "inst" (rect 8 176 25 188)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 15 14)(font "Arial" (font_size 8)))
-		(text "clk" (rect 21 27 36 41)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "rst" (rect 0 0 15 14)(font "Arial" (font_size 8)))
-		(text "rst" (rect 21 43 36 57)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "turn" (rect 0 0 22 14)(font "Arial" (font_size 8)))
-		(text "turn" (rect 21 59 43 73)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "play_pile_top_card[5..0]" (rect 0 0 135 14)(font "Arial" (font_size 8)))
-		(text "play_pile_top_card[5..0]" (rect 21 75 156 89)(font "Arial" (font_size 8)))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "new_card[5..0]" (rect 0 0 87 14)(font "Arial" (font_size 8)))
-		(text "new_card[5..0]" (rect 21 91 108 105)(font "Arial" (font_size 8)))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "push_card" (rect 0 0 61 14)(font "Arial" (font_size 8)))
-		(text "push_card" (rect 21 107 82 121)(font "Arial" (font_size 8)))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 288 32)
-		(output)
-		(text "scan_index[5..0]" (rect 0 0 94 14)(font "Arial" (font_size 8)))
-		(text "scan_index[5..0]" (rect 173 27 267 41)(font "Arial" (font_size 8)))
-		(line (pt 288 32)(pt 272 32)(line_width 3))
-	)
-	(port
-		(pt 288 48)
-		(output)
-		(text "scan_enable" (rect 0 0 73 14)(font "Arial" (font_size 8)))
-		(text "scan_enable" (rect 194 43 267 57)(font "Arial" (font_size 8)))
-		(line (pt 288 48)(pt 272 48))
-	)
-	(port
-		(pt 288 64)
-		(output)
-		(text "scan_next" (rect 0 0 60 14)(font "Arial" (font_size 8)))
-		(text "scan_next" (rect 207 59 267 73)(font "Arial" (font_size 8)))
-		(line (pt 288 64)(pt 272 64))
-	)
-	(port
-		(pt 288 80)
-		(output)
-		(text "num_cards[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
-		(text "num_cards[5..0]" (rect 175 75 267 89)(font "Arial" (font_size 8)))
-		(line (pt 288 80)(pt 272 80)(line_width 3))
-	)
-	(port
-		(pt 288 96)
-		(output)
-		(text "draw_enable" (rect 0 0 75 14)(font "Arial" (font_size 8)))
-		(text "draw_enable" (rect 192 91 267 105)(font "Arial" (font_size 8)))
-		(line (pt 288 96)(pt 272 96))
-	)
-	(port
-		(pt 288 112)
-		(output)
-		(text "current_card[5..0]" (rect 0 0 102 14)(font "Arial" (font_size 8)))
-		(text "current_card[5..0]" (rect 165 107 267 121)(font "Arial" (font_size 8)))
-		(line (pt 288 112)(pt 272 112)(line_width 3))
-	)
-	(port
-		(pt 288 128)
-		(output)
-		(text "stack_mode[1..0]" (rect 0 0 96 14)(font "Arial" (font_size 8)))
-		(text "stack_mode[1..0]" (rect 171 123 267 137)(font "Arial" (font_size 8)))
-		(line (pt 288 128)(pt 272 128)(line_width 3))
-	)
-	(port
-		(pt 288 144)
-		(output)
-		(text "legal_play" (rect 0 0 56 14)(font "Arial" (font_size 8)))
-		(text "legal_play" (rect 211 139 267 153)(font "Arial" (font_size 8)))
-		(line (pt 288 144)(pt 272 144))
-	)
-	(port
-		(pt 288 160)
-		(output)
-		(text "done" (rect 0 0 28 14)(font "Arial" (font_size 8)))
-		(text "done" (rect 239 155 267 169)(font "Arial" (font_size 8)))
-		(line (pt 288 160)(pt 272 160))
-	)
-	(drawing
-		(rectangle (rect 16 16 272 176))
-	)
-)
-(symbol
 	(rect 752 224 1000 400)
 	(text "g58_sys_ctrl_fsm" (rect 5 0 94 12)(font "Arial" ))
 	(text "inst1" (rect 8 160 31 172)(font "Arial" ))
@@ -573,232 +460,6 @@ applicable agreement for further details.
 	(drawing
 		(rectangle (rect 16 16 232 160))
 	)
-)
-(symbol
-	(rect 328 32 616 256)
-	(text "g58_human_player" (rect 5 0 113 14)(font "Arial" (font_size 8)))
-	(text "inst2" (rect 8 208 31 220)(font "Arial" ))
-	(port
-		(pt 0 32)
-		(input)
-		(text "clk" (rect 0 0 15 14)(font "Arial" (font_size 8)))
-		(text "clk" (rect 21 27 36 41)(font "Arial" (font_size 8)))
-		(line (pt 0 32)(pt 16 32))
-	)
-	(port
-		(pt 0 48)
-		(input)
-		(text "rst" (rect 0 0 15 14)(font "Arial" (font_size 8)))
-		(text "rst" (rect 21 43 36 57)(font "Arial" (font_size 8)))
-		(line (pt 0 48)(pt 16 48))
-	)
-	(port
-		(pt 0 64)
-		(input)
-		(text "turn" (rect 0 0 22 14)(font "Arial" (font_size 8)))
-		(text "turn" (rect 21 59 43 73)(font "Arial" (font_size 8)))
-		(line (pt 0 64)(pt 16 64))
-	)
-	(port
-		(pt 0 80)
-		(input)
-		(text "play_pile_top_card[5..0]" (rect 0 0 135 14)(font "Arial" (font_size 8)))
-		(text "play_pile_top_card[5..0]" (rect 21 75 156 89)(font "Arial" (font_size 8)))
-		(line (pt 0 80)(pt 16 80)(line_width 3))
-	)
-	(port
-		(pt 0 96)
-		(input)
-		(text "new_card[5..0]" (rect 0 0 87 14)(font "Arial" (font_size 8)))
-		(text "new_card[5..0]" (rect 21 91 108 105)(font "Arial" (font_size 8)))
-		(line (pt 0 96)(pt 16 96)(line_width 3))
-	)
-	(port
-		(pt 0 112)
-		(input)
-		(text "push_card" (rect 0 0 61 14)(font "Arial" (font_size 8)))
-		(text "push_card" (rect 21 107 82 121)(font "Arial" (font_size 8)))
-		(line (pt 0 112)(pt 16 112))
-	)
-	(port
-		(pt 0 128)
-		(input)
-		(text "play_button" (rect 0 0 66 14)(font "Arial" (font_size 8)))
-		(text "play_button" (rect 21 123 87 137)(font "Arial" (font_size 8)))
-		(line (pt 0 128)(pt 16 128))
-	)
-	(port
-		(pt 0 144)
-		(input)
-		(text "draw_button" (rect 0 0 73 14)(font "Arial" (font_size 8)))
-		(text "draw_button" (rect 21 139 94 153)(font "Arial" (font_size 8)))
-		(line (pt 0 144)(pt 16 144))
-	)
-	(port
-		(pt 0 160)
-		(input)
-		(text "up_button" (rect 0 0 56 14)(font "Arial" (font_size 8)))
-		(text "up_button" (rect 21 155 77 169)(font "Arial" (font_size 8)))
-		(line (pt 0 160)(pt 16 160))
-	)
-	(port
-		(pt 0 176)
-		(input)
-		(text "down_button" (rect 0 0 75 14)(font "Arial" (font_size 8)))
-		(text "down_button" (rect 21 171 96 185)(font "Arial" (font_size 8)))
-		(line (pt 0 176)(pt 16 176))
-	)
-	(port
-		(pt 288 32)
-		(output)
-		(text "num_cards[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
-		(text "num_cards[5..0]" (rect 175 27 267 41)(font "Arial" (font_size 8)))
-		(line (pt 288 32)(pt 272 32)(line_width 3))
-	)
-	(port
-		(pt 288 48)
-		(output)
-		(text "illegal_play" (rect 0 0 61 14)(font "Arial" (font_size 8)))
-		(text "illegal_play" (rect 206 43 267 57)(font "Arial" (font_size 8)))
-		(line (pt 288 48)(pt 272 48))
-	)
-	(port
-		(pt 288 64)
-		(output)
-		(text "current_card[5..0]" (rect 0 0 102 14)(font "Arial" (font_size 8)))
-		(text "current_card[5..0]" (rect 165 59 267 73)(font "Arial" (font_size 8)))
-		(line (pt 288 64)(pt 272 64)(line_width 3))
-	)
-	(port
-		(pt 288 80)
-		(output)
-		(text "done" (rect 0 0 28 14)(font "Arial" (font_size 8)))
-		(text "done" (rect 239 75 267 89)(font "Arial" (font_size 8)))
-		(line (pt 288 80)(pt 272 80))
-	)
-	(port
-		(pt 288 96)
-		(output)
-		(text "draw_enable" (rect 0 0 75 14)(font "Arial" (font_size 8)))
-		(text "draw_enable" (rect 192 91 267 105)(font "Arial" (font_size 8)))
-		(line (pt 288 96)(pt 272 96))
-	)
-	(port
-		(pt 288 112)
-		(output)
-		(text "addr[5..0]" (rect 0 0 54 14)(font "Arial" (font_size 8)))
-		(text "addr[5..0]" (rect 213 107 267 121)(font "Arial" (font_size 8)))
-		(line (pt 288 112)(pt 272 112)(line_width 3))
-	)
-	(drawing
-		(rectangle (rect 16 16 272 208))
-	)
-)
-(symbol
-	(rect 992 720 1168 864)
-	(text "LPM_FF" (rect 19 0 78 16)(font "Arial" (font_size 10)))
-	(text "play_pile" (rect 3 133 46 145)(font "Arial" ))
-	(port
-		(pt 0 104)
-		(input)
-		(text "enable" (rect 20 97 57 111)(font "Arial" (font_size 8)))
-		(text "enable" (rect 20 97 57 111)(font "Arial" (font_size 8)))
-		(line (pt 0 104)(pt 16 104))
-	)
-	(port
-		(pt 0 88)
-		(input)
-		(text "clock" (rect 20 81 49 95)(font "Arial" (font_size 8))(invisible))
-		(text "clock" (rect 20 81 49 95)(font "Arial" (font_size 8))(invisible))
-		(line (pt 0 88)(pt 16 88))
-	)
-	(port
-		(pt 0 24)
-		(input)
-		(text "aload" (rect 20 17 50 31)(font "Arial" (font_size 8)))
-		(text "aload" (rect 20 17 50 31)(font "Arial" (font_size 8)))
-		(line (pt 0 24)(pt 16 24))
-	)
-	(port
-		(pt 0 40)
-		(input)
-		(text "sset" (rect 20 33 44 47)(font "Arial" (font_size 8)))
-		(text "sset" (rect 20 33 44 47)(font "Arial" (font_size 8)))
-		(line (pt 0 40)(pt 16 40))
-	)
-	(port
-		(pt 0 56)
-		(input)
-		(text "sload" (rect 20 49 50 63)(font "Arial" (font_size 8)))
-		(text "sload" (rect 20 49 50 63)(font "Arial" (font_size 8)))
-		(line (pt 0 56)(pt 16 56))
-	)
-	(port
-		(pt 88 0)
-		(input)
-		(text "aset" (rect 79 17 103 31)(font "Arial" (font_size 8)))
-		(text "aset" (rect 79 17 103 31)(font "Arial" (font_size 8)))
-		(line (pt 88 16)(pt 88 0))
-	)
-	(port
-		(pt 0 120)
-		(input)
-		(text "sclr" (rect 20 113 41 127)(font "Arial" (font_size 8)))
-		(text "sclr" (rect 20 113 41 127)(font "Arial" (font_size 8)))
-		(line (pt 0 120)(pt 16 120))
-	)
-	(port
-		(pt 88 144)
-		(input)
-		(text "aclr" (rect 80 113 101 127)(font "Arial" (font_size 8)))
-		(text "aclr" (rect 80 113 101 127)(font "Arial" (font_size 8)))
-		(line (pt 88 144)(pt 88 128))
-	)
-	(port
-		(pt 0 72)
-		(input)
-		(text "data[LPM_WIDTH-1..0]" (rect 20 63 146 77)(font "Arial" (font_size 8)))
-		(text "data[]" (rect 20 63 51 77)(font "Arial" (font_size 8)))
-		(line (pt 0 72)(pt 16 72)(line_width 3))
-	)
-	(port
-		(pt 176 88)
-		(output)
-		(text "q[LPM_WIDTH-1..0]" (rect 144 81 252 95)(font "Arial" (font_size 8)))
-		(text "q[]" (rect 144 81 158 95)(font "Arial" (font_size 8)))
-		(line (pt 160 88)(pt 176 88)(line_width 3))
-	)
-	(parameter
-		"LPM_AVALUE"
-		""
-		"Unsigned value associated with the aset port"
-	)
-	(parameter
-		"LPM_FFTYPE"
-		"\"DFF\""
-		"Selects behavior as DFF or TFF"
-		"\"DFF\"" "\"TFF\"" 
-	)
-	(parameter
-		"LPM_SVALUE"
-		""
-		"Unsigned value associated with the sset port"
-	)
-	(parameter
-		"LPM_WIDTH"
-		"6"
-		"Width of I/O, any integer > 0"
-		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
-	)
-	(drawing
-		(line (pt 16 16)(pt 160 16))
-		(line (pt 16 128)(pt 160 128))
-		(line (pt 160 128)(pt 160 16))
-		(line (pt 16 128)(pt 16 16))
-		(line (pt 16 80)(pt 24 88))
-		(line (pt 24 88)(pt 16 96))
-	)
-	(annotation_block (parameter)(rect 1168 648 1312 718))
 )
 (symbol
 	(rect -40 280 80 376)
@@ -1111,35 +772,468 @@ applicable agreement for further details.
 	(annotation_block (parameter)(rect 272 776 416 818))
 )
 (symbol
-	(rect 696 760 808 808)
-	(text "LPM_CONSTANT" (rect 4 0 125 16)(font "Arial" (font_size 10)))
-	(text "inst17" (rect 3 37 32 49)(font "Arial" ))
+	(rect 904 872 968 920)
+	(text "OR2" (rect 1 0 19 10)(font "Arial" (font_size 6)))
+	(text "inst" (rect 3 37 20 49)(font "Arial" ))
 	(port
-		(pt 112 32)
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 15 32))
+	)
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 15 16))
+	)
+	(port
+		(pt 64 24)
 		(output)
-		(text "result[LPM_WIDTH-1..0]" (rect 75 19 208 33)(font "Arial" (font_size 8)))
-		(text "result[]" (rect 75 19 113 33)(font "Arial" (font_size 8)))
-		(line (pt 64 32)(pt 112 32)(line_width 3))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 48 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 36)(pt 25 36))
+		(line (pt 14 13)(pt 25 13))
+		(arc (pt 7 29)(pt 7 19)(rect -14 8 19 41))
+		(arc (pt 49 24)(pt 25 13)(rect -6 13 57 76))
+		(arc (pt 25 35)(pt 49 24)(rect -6 -27 57 36))
+	)
+)
+(symbol
+	(rect 312 312 600 536)
+	(text "g58_comp_player" (rect 5 0 106 14)(font "Arial" (font_size 8)))
+	(text "inst_comp_player" (rect 8 208 95 220)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "clk" (rect 21 27 36 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "rst" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "rst" (rect 21 43 36 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "turn" (rect 0 0 22 14)(font "Arial" (font_size 8)))
+		(text "turn" (rect 21 59 43 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "play_pile_top_card[5..0]" (rect 0 0 135 14)(font "Arial" (font_size 8)))
+		(text "play_pile_top_card[5..0]" (rect 21 75 156 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "new_card[5..0]" (rect 0 0 87 14)(font "Arial" (font_size 8)))
+		(text "new_card[5..0]" (rect 21 91 108 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "push_card" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "push_card" (rect 21 107 82 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "scan_index[5..0]" (rect 0 0 94 14)(font "Arial" (font_size 8)))
+		(text "scan_index[5..0]" (rect 173 27 267 41)(font "Arial" (font_size 8)))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "scan_enable" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "scan_enable" (rect 194 43 267 57)(font "Arial" (font_size 8)))
+		(line (pt 288 48)(pt 272 48))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "scan_next" (rect 0 0 60 14)(font "Arial" (font_size 8)))
+		(text "scan_next" (rect 207 59 267 73)(font "Arial" (font_size 8)))
+		(line (pt 288 64)(pt 272 64))
+	)
+	(port
+		(pt 288 80)
+		(output)
+		(text "num_cards[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "num_cards[5..0]" (rect 175 75 267 89)(font "Arial" (font_size 8)))
+		(line (pt 288 80)(pt 272 80)(line_width 3))
+	)
+	(port
+		(pt 288 96)
+		(output)
+		(text "draw_enable" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "draw_enable" (rect 192 91 267 105)(font "Arial" (font_size 8)))
+		(line (pt 288 96)(pt 272 96))
+	)
+	(port
+		(pt 288 112)
+		(output)
+		(text "card_played" (rect 0 0 70 14)(font "Arial" (font_size 8)))
+		(text "card_played" (rect 197 107 267 121)(font "Arial" (font_size 8)))
+		(line (pt 288 112)(pt 272 112))
+	)
+	(port
+		(pt 288 128)
+		(output)
+		(text "current_card[5..0]" (rect 0 0 102 14)(font "Arial" (font_size 8)))
+		(text "current_card[5..0]" (rect 165 123 267 137)(font "Arial" (font_size 8)))
+		(line (pt 288 128)(pt 272 128)(line_width 3))
+	)
+	(port
+		(pt 288 144)
+		(output)
+		(text "stack_mode[1..0]" (rect 0 0 96 14)(font "Arial" (font_size 8)))
+		(text "stack_mode[1..0]" (rect 171 139 267 153)(font "Arial" (font_size 8)))
+		(line (pt 288 144)(pt 272 144)(line_width 3))
+	)
+	(port
+		(pt 288 160)
+		(output)
+		(text "legal_play" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "legal_play" (rect 211 155 267 169)(font "Arial" (font_size 8)))
+		(line (pt 288 160)(pt 272 160))
+	)
+	(port
+		(pt 288 176)
+		(output)
+		(text "done" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "done" (rect 239 171 267 185)(font "Arial" (font_size 8)))
+		(line (pt 288 176)(pt 272 176))
+	)
+	(drawing
+		(rectangle (rect 16 16 272 208))
+	)
+)
+(symbol
+	(rect 328 32 616 256)
+	(text "g58_human_player" (rect 5 0 113 14)(font "Arial" (font_size 8)))
+	(text "inst_human_player" (rect 8 208 101 220)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "clk" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "clk" (rect 21 27 36 41)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "rst" (rect 0 0 15 14)(font "Arial" (font_size 8)))
+		(text "rst" (rect 21 43 36 57)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "turn" (rect 0 0 22 14)(font "Arial" (font_size 8)))
+		(text "turn" (rect 21 59 43 73)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "play_pile_top_card[5..0]" (rect 0 0 135 14)(font "Arial" (font_size 8)))
+		(text "play_pile_top_card[5..0]" (rect 21 75 156 89)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "new_card[5..0]" (rect 0 0 87 14)(font "Arial" (font_size 8)))
+		(text "new_card[5..0]" (rect 21 91 108 105)(font "Arial" (font_size 8)))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "push_card" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "push_card" (rect 21 107 82 121)(font "Arial" (font_size 8)))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "play_button" (rect 0 0 66 14)(font "Arial" (font_size 8)))
+		(text "play_button" (rect 21 123 87 137)(font "Arial" (font_size 8)))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 0 144)
+		(input)
+		(text "draw_button" (rect 0 0 73 14)(font "Arial" (font_size 8)))
+		(text "draw_button" (rect 21 139 94 153)(font "Arial" (font_size 8)))
+		(line (pt 0 144)(pt 16 144))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "up_button" (rect 0 0 56 14)(font "Arial" (font_size 8)))
+		(text "up_button" (rect 21 155 77 169)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 16 160))
+	)
+	(port
+		(pt 0 176)
+		(input)
+		(text "down_button" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "down_button" (rect 21 171 96 185)(font "Arial" (font_size 8)))
+		(line (pt 0 176)(pt 16 176))
+	)
+	(port
+		(pt 288 32)
+		(output)
+		(text "num_cards[5..0]" (rect 0 0 92 14)(font "Arial" (font_size 8)))
+		(text "num_cards[5..0]" (rect 175 27 267 41)(font "Arial" (font_size 8)))
+		(line (pt 288 32)(pt 272 32)(line_width 3))
+	)
+	(port
+		(pt 288 48)
+		(output)
+		(text "illegal_play" (rect 0 0 61 14)(font "Arial" (font_size 8)))
+		(text "illegal_play" (rect 206 43 267 57)(font "Arial" (font_size 8)))
+		(line (pt 288 48)(pt 272 48))
+	)
+	(port
+		(pt 288 64)
+		(output)
+		(text "current_card[5..0]" (rect 0 0 102 14)(font "Arial" (font_size 8)))
+		(text "current_card[5..0]" (rect 165 59 267 73)(font "Arial" (font_size 8)))
+		(line (pt 288 64)(pt 272 64)(line_width 3))
+	)
+	(port
+		(pt 288 80)
+		(output)
+		(text "done" (rect 0 0 28 14)(font "Arial" (font_size 8)))
+		(text "done" (rect 239 75 267 89)(font "Arial" (font_size 8)))
+		(line (pt 288 80)(pt 272 80))
+	)
+	(port
+		(pt 288 96)
+		(output)
+		(text "draw_enable" (rect 0 0 75 14)(font "Arial" (font_size 8)))
+		(text "draw_enable" (rect 192 91 267 105)(font "Arial" (font_size 8)))
+		(line (pt 288 96)(pt 272 96))
+	)
+	(port
+		(pt 288 112)
+		(output)
+		(text "card_played" (rect 0 0 70 14)(font "Arial" (font_size 8)))
+		(text "card_played" (rect 197 107 267 121)(font "Arial" (font_size 8)))
+		(line (pt 288 112)(pt 272 112))
+	)
+	(port
+		(pt 288 128)
+		(output)
+		(text "addr[5..0]" (rect 0 0 54 14)(font "Arial" (font_size 8)))
+		(text "addr[5..0]" (rect 213 123 267 137)(font "Arial" (font_size 8)))
+		(line (pt 288 128)(pt 272 128)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 272 208))
+	)
+)
+(symbol
+	(rect 704 720 816 816)
+	(text "LPM_MUX" (rect 23 0 94 16)(font "Arial" (font_size 10)))
+	(text "inst24" (rect 3 84 32 96)(font "Arial" ))
+	(port
+		(pt 0 48)
+		(input)
+		(text "data[LPM_SIZE-1..0][LPM_WIDTH-1..0]" (rect 6 33 221 47)(font "Arial" (font_size 8)))
+		(text "data[][]" (rect 6 33 44 47)(font "Arial" (font_size 8)))
+		(line (pt 0 48)(pt 44 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "clock" (rect 6 51 35 65)(font "Arial" (font_size 8)))
+		(text "clock" (rect 6 51 35 65)(font "Arial" (font_size 8)))
+		(line (pt 0 64)(pt 44 64))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "aclr" (rect 6 19 27 33)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 6 19 27 33)(font "Arial" (font_size 8)))
+		(line (pt 0 32)(pt 44 32))
+	)
+	(port
+		(pt 56 96)
+		(input)
+		(text "sel[LPM_WIDTHS-1..0]" (rect 59 80 185 94)(font "Arial" (font_size 8)))
+		(text "sel[]" (rect 59 80 82 94)(font "Arial" (font_size 8)))
+		(line (pt 56 96)(pt 56 80)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "clken" (rect 6 67 35 81)(font "Arial" (font_size 8)))
+		(text "clken" (rect 6 67 35 81)(font "Arial" (font_size 8)))
+		(line (pt 0 80)(pt 44 80))
+	)
+	(port
+		(pt 112 56)
+		(output)
+		(text "result[LPM_WIDTH-1..0]" (rect 75 41 208 55)(font "Arial" (font_size 8)))
+		(text "result[]" (rect 75 41 113 55)(font "Arial" (font_size 8)))
+		(line (pt 68 56)(pt 112 56)(line_width 3))
 	)
 	(parameter
-		"LPM_CVALUE"
-		"5"
-		"Unsigned value to which outputs will be set"
+		"LPM_PIPELINE"
+		""
+		"Output latency in clock cycles - requires use of optional clock"
+		"0" "1" "2" "3" "4" 
+	)
+	(parameter
+		"LPM_SIZE"
+		"2"
+		"Number of inputs per MUX, any integer > 1"
+		" 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
 	)
 	(parameter
 		"LPM_WIDTH"
 		"6"
-		"Width of output, any integer > 0"
-		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" 
+		"Number of MUXes, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(parameter
+		"LPM_WIDTHS"
+		"CEIL(LOG2(LPM_SIZE))"
+		"Width of sel[] port"
+		"CEIL(LOG2(LPM_SIZE))" 
 	)
 	(drawing
-		(text "(cvalue)" (rect 21 26 68 40)(font "Arial" (font_size 8)))
-		(line (pt 16 24)(pt 64 24))
-		(line (pt 16 40)(pt 64 40))
-		(line (pt 64 40)(pt 64 24))
-		(line (pt 16 40)(pt 16 24))
+		(line (pt 44 88)(pt 44 16))
+		(line (pt 68 72)(pt 68 32))
+		(line (pt 44 16)(pt 68 32))
+		(line (pt 44 88)(pt 68 72))
 	)
-	(annotation_block (parameter)(rect 808 712 952 754))
+	(annotation_block (parameter)(rect 816 648 1053 718))
+)
+(symbol
+	(rect 992 720 1168 864)
+	(text "LPM_FF" (rect 19 0 78 16)(font "Arial" (font_size 10)))
+	(text "play_pile" (rect 3 133 46 145)(font "Arial" ))
+	(port
+		(pt 0 104)
+		(input)
+		(text "enable" (rect 20 97 57 111)(font "Arial" (font_size 8)))
+		(text "enable" (rect 20 97 57 111)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 16 104))
+	)
+	(port
+		(pt 0 88)
+		(input)
+		(text "clock" (rect 20 81 49 95)(font "Arial" (font_size 8))(invisible))
+		(text "clock" (rect 20 81 49 95)(font "Arial" (font_size 8))(invisible))
+		(line (pt 0 88)(pt 16 88))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "aload" (rect 20 17 50 31)(font "Arial" (font_size 8)))
+		(text "aload" (rect 20 17 50 31)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 16 24))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "sset" (rect 20 33 44 47)(font "Arial" (font_size 8)))
+		(text "sset" (rect 20 33 44 47)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40))
+	)
+	(port
+		(pt 0 56)
+		(input)
+		(text "sload" (rect 20 49 50 63)(font "Arial" (font_size 8)))
+		(text "sload" (rect 20 49 50 63)(font "Arial" (font_size 8)))
+		(line (pt 0 56)(pt 16 56))
+	)
+	(port
+		(pt 88 0)
+		(input)
+		(text "aset" (rect 79 17 103 31)(font "Arial" (font_size 8)))
+		(text "aset" (rect 79 17 103 31)(font "Arial" (font_size 8)))
+		(line (pt 88 16)(pt 88 0))
+	)
+	(port
+		(pt 0 120)
+		(input)
+		(text "sclr" (rect 20 113 41 127)(font "Arial" (font_size 8)))
+		(text "sclr" (rect 20 113 41 127)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 16 120))
+	)
+	(port
+		(pt 88 144)
+		(input)
+		(text "aclr" (rect 80 113 101 127)(font "Arial" (font_size 8)))
+		(text "aclr" (rect 80 113 101 127)(font "Arial" (font_size 8)))
+		(line (pt 88 144)(pt 88 128))
+	)
+	(port
+		(pt 0 72)
+		(input)
+		(text "data[LPM_WIDTH-1..0]" (rect 20 63 146 77)(font "Arial" (font_size 8)))
+		(text "data[]" (rect 20 63 51 77)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 16 72)(line_width 3))
+	)
+	(port
+		(pt 176 88)
+		(output)
+		(text "q[LPM_WIDTH-1..0]" (rect 144 81 252 95)(font "Arial" (font_size 8)))
+		(text "q[]" (rect 144 81 158 95)(font "Arial" (font_size 8)))
+		(line (pt 160 88)(pt 176 88)(line_width 3))
+	)
+	(parameter
+		"LPM_AVALUE"
+		"7"
+		"Unsigned value associated with the aset port"
+	)
+	(parameter
+		"LPM_FFTYPE"
+		"\"DFF\""
+		"Selects behavior as DFF or TFF"
+		"\"DFF\"" "\"TFF\"" 
+	)
+	(parameter
+		"LPM_SVALUE"
+		""
+		"Unsigned value associated with the sset port"
+	)
+	(parameter
+		"LPM_WIDTH"
+		"6"
+		"Width of I/O, any integer > 0"
+		" 1" " 2" " 3" " 4" " 5" " 6" " 7" " 8" " 9" "10" "11" "12" "13" "14" "15" "16" "20" "24" "28" "32" "40" "48" "56" "64" 
+	)
+	(drawing
+		(line (pt 16 16)(pt 160 16))
+		(line (pt 16 128)(pt 160 128))
+		(line (pt 160 128)(pt 160 16))
+		(line (pt 16 128)(pt 16 16))
+		(line (pt 16 80)(pt 24 88))
+		(line (pt 24 88)(pt 16 96))
+	)
+	(annotation_block (parameter)(rect 1168 648 1312 718))
 )
 (connector
 	(pt 728 392)
@@ -1172,14 +1266,6 @@ applicable agreement for further details.
 (connector
 	(pt 712 288)
 	(pt 752 288)
-)
-(connector
-	(pt 600 472)
-	(pt 712 472)
-)
-(connector
-	(pt 712 472)
-	(pt 712 304)
 )
 (connector
 	(pt 712 304)
@@ -1466,11 +1552,6 @@ applicable agreement for further details.
 	(bus)
 )
 (connector
-	(pt 808 792)
-	(pt 992 792)
-	(bus)
-)
-(connector
 	(text "init_pulse" (rect 664 240 710 252)(font "Arial" ))
 	(pt 680 256)
 	(pt 752 256)
@@ -1515,4 +1596,78 @@ applicable agreement for further details.
 	(pt 616 96)
 	(pt 712 96)
 	(bus)
+)
+(connector
+	(pt 992 824)
+	(pt 968 824)
+)
+(connector
+	(pt 968 824)
+	(pt 968 896)
+)
+(connector
+	(pt 712 304)
+	(pt 712 488)
+)
+(connector
+	(pt 600 488)
+	(pt 712 488)
+)
+(connector
+	(text "comp_played_card" (rect 608 408 701 420)(font "Arial" ))
+	(pt 600 424)
+	(pt 680 424)
+)
+(connector
+	(text "human_played_card" (rect 630 128 729 140)(font "Arial" ))
+	(pt 616 144)
+	(pt 672 144)
+)
+(connector
+	(text "comp_played_card" (rect 824 888 917 900)(font "Arial" ))
+	(pt 904 904)
+	(pt 816 904)
+)
+(connector
+	(text "human_played_card" (rect 799 872 898 884)(font "Arial" ))
+	(pt 800 888)
+	(pt 904 888)
+)
+(connector
+	(pt 984 792)
+	(pt 984 776)
+	(bus)
+)
+(connector
+	(pt 992 792)
+	(pt 984 792)
+	(bus)
+)
+(connector
+	(pt 984 776)
+	(pt 816 776)
+	(bus)
+)
+(connector
+	(text "player_turn" (rect 736 825 748 880)(font "Arial" )(vertical))
+	(pt 760 816)
+	(pt 760 856)
+	(bus)
+)
+(connector
+	(text "human_current_card[5..0], comp_current_card[5..0]" (rect 478 752 731 764)(font "Arial" ))
+	(pt 704 768)
+	(pt 480 768)
+	(bus)
+)
+(connector
+	(text "comp_current_card[5..0]" (rect 608 424 728 436)(font "Arial" ))
+	(pt 600 440)
+	(pt 704 440)
+	(bus)
+)
+(connector
+	(text "init_pulse" (rect 1064 665 1076 711)(font "Arial" )(vertical))
+	(pt 1080 720)
+	(pt 1080 664)
 )
